@@ -28,8 +28,40 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/firebase'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // Firebase Configuration (https://firebase.nuxtjs.org/guide/)
+  firebase: {
+    config: {
+      apiKey: 'AIzaSyA-5tojAEBlkSLR-xwNFALegJw_A5Ch-WY',
+      authDomain: 'spaceninja-book-list-dev.firebaseapp.com',
+      databaseURL: 'https://spaceninja-book-list-dev.firebaseio.com',
+      projectId: 'spaceninja-book-list-dev',
+    },
+    services: {
+      auth: {
+        initialize: {
+          onAuthStateChangedAction: 'onAuthStateChanged',
+        },
+        ssr: true,
+      },
+      database: true,
+    },
+  },
+
+  // PWA Configuration (https://pwa.nuxtjs.org/)
+  pwa: {
+    meta: false,
+    icon: false,
+    workbox: {
+      importScripts: ['/firebase-auth-sw.js'],
+      // By default the workbox module will not install the service worker in
+      // dev environment to avoid conflicts with HMR. Only set this true for
+      // testing and remember to always clear your browser cache in development
+      dev: true,
+    },
+  },
 }

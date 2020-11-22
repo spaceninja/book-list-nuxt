@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div>
+      <Auth />
       <Logo />
       <h1 class="title">book-list-nuxt</h1>
       <div class="links">
