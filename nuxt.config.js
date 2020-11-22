@@ -64,4 +64,4 @@ export default {
       dev: true,
     },
   },
-}
+};

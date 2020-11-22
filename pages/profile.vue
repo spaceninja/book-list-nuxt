@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
 export default {
   layout: 'basic',
   middleware: 'auth',
@@ -18,9 +18,9 @@ export default {
   },
   methods: {
     async logout() {
-      await this.$fire.auth.signOut()
-      this.$router.push('/login')
+      await this.$fire.auth.signOut();
+      this.$router.push('/login');
     },
   },
-}
+};
 </script>

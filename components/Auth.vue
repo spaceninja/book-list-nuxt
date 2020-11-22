@@ -28,7 +28,7 @@
 
 <script>
 /* eslint-disable no-console */
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   data() {
@@ -37,7 +37,7 @@ export default {
         email: '',
         password: '',
       },
-    }
+    };
   },
   computed: {
     ...mapState({
@@ -53,10 +53,10 @@ export default {
         const user = await this.$fire.auth.createUserWithEmailAndPassword(
           this.formData.email,
           this.formData.password
-        )
-        console.log('CREATED USER', user)
+        );
+        console.log('CREATED USER', user);
       } catch (e) {
-        alert(e)
+        alert(e);
       }
     },
     async signInUser() {
@@ -64,20 +64,20 @@ export default {
         const user = await this.$fire.auth.signInWithEmailAndPassword(
           this.formData.email,
           this.formData.password
-        )
-        console.log('LOGGED IN', user)
+        );
+        console.log('LOGGED IN', user);
       } catch (e) {
-        alert(e)
+        alert(e);
       }
     },
     async logout() {
       try {
-        await this.$fire.auth.signOut()
-        console.log('LOGGED OUT')
+        await this.$fire.auth.signOut();
+        console.log('LOGGED OUT');
       } catch (e) {
-        alert(e)
+        alert(e);
       }
     },
   },
-}
+};
 </script>

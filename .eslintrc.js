@@ -15,6 +15,7 @@ module.exports = {
     'plugin:nuxt/recommended',
   ],
   plugins: ['prettier'],
+  ignorePatterns: ['static/firebase-auth-sw.js'],
   // add your custom rules here
   rules: {},
-}
+};

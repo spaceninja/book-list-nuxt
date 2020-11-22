@@ -12,11 +12,11 @@ export default {
   components: {},
   methods: {
     async signInWithGitHub() {
-      const provider = new this.$fireModule.auth.GithubAuthProvider()
+      const provider = new this.$fireModule.auth.GithubAuthProvider();
       // You can add or remove more scopes here provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-      await this.$fire.auth.signInWithPopup(provider)
-      this.$router.push('/profile')
+      await this.$fire.auth.signInWithPopup(provider);
+      this.$router.push('/profile');
     },
   },
-}
+};
 </script>
