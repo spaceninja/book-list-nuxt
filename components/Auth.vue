@@ -40,12 +40,8 @@ export default {
     };
   },
   computed: {
-    ...mapState({
-      authUser: (state) => state.authUser,
-    }),
-    ...mapGetters({
-      isLoggedIn: 'isLoggedIn',
-    }),
+    ...mapState(['authUser']),
+    ...mapGetters(['isLoggedIn']),
   },
   methods: {
     async createUser() {
