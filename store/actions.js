@@ -1,4 +1,6 @@
 /* eslint-disable no-console, no-throw-literal */
+import { firebaseAction } from 'vuexfire';
+
 export default {
   async nuxtServerInit({ dispatch }, ctx) {
     if (this.$fire.auth === null) {
@@ -48,4 +50,15 @@ export default {
     console.log('AuthStateChangedAction', authUser);
     commit('SET_AUTH_USER', { authUser });
   },
+
+  bindBooks: firebaseAction(async function ({ bindFirebaseRef }) {
+    console.log('BIND BOOKS');
+    await bindFirebaseRef('books', this.$fire.database.ref('books'), {
+      wait: true,
+    });
+  }),
+
+  unbindBooks: firebaseAction(function ({ unbindFirebaseRef }) {
+    unbindFirebaseRef('books', false);
+  }),
 };
