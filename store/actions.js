@@ -51,9 +51,9 @@ export default {
     commit('SET_AUTH_USER', { authUser });
   },
 
-  bindBooks: firebaseAction(async function ({ bindFirebaseRef }) {
+  bindBooks: firebaseAction(function ({ bindFirebaseRef }) {
     console.log('BIND BOOKS');
-    await bindFirebaseRef('books', this.$fire.database.ref('books'), {
+    return bindFirebaseRef('books', this.$fire.database.ref('books'), {
       wait: true,
     });
   }),

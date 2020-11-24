@@ -1,13 +1,17 @@
 <template>
   <div>
-    <button type="button" @click="readFromRealtimeDb()">
-      Read from Realtime DB
-    </button>
+    <ul>
+      <li v-for="book in books" :key="book.isbn">
+        <i>{{ book.title }}</i> by {{ book.authorFirst }} {{ book.authorLast }}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 /* eslint-disable no-console */
+import { mapState } from 'vuex';
+
 export default {
   /** Get data on Server Side: */
   async fetch({ app, store }) {
@@ -19,6 +23,9 @@ export default {
     } catch (e) {
       console.error(e);
     }
+  },
+  computed: {
+    ...mapState(['books']),
   },
   /**  Bind Vuexfire on client-side: */
   async mounted() {
