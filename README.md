@@ -18,3 +18,15 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+- [x] Add basic authentication
+- [x] Sync database to Vuex
+- [ ] Handle other logins
+- [ ] Handle Logged-Out
+- [ ] Handle empty book list
+- [ ] Add sorting
+- [ ] Add filtering
+- [ ] Add editing
+- [ ] Add deleting
+- [ ] Add creation
+- [ ] Add API looking for new books

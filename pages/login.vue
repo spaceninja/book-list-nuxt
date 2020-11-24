@@ -1,5 +1,6 @@
 <template>
   <div v-if="!isLoggedIn">
+    <Auth />
     <h1>Sign In</h1>
     <p>We only accept social auth here:</p>
     <button @click="signInWithGitHub">Sign in with GitHub</button>
