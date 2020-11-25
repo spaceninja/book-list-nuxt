@@ -17,6 +17,7 @@
       <div>
         <button type="button" @click="createUser">Register</button>
         <button type="button" @click="signInUser">Sign In</button>
+        <button type="button" @click="signInWithGitHub">GitHub</button>
       </div>
     </form>
     <div v-else>
@@ -73,6 +74,14 @@ export default {
       } catch (e) {
         alert(e);
       }
+    },
+    async signInWithGitHub() {
+      const provider = new this.$fireModule.auth.GithubAuthProvider();
+      // You can add or remove more scopes here:
+      // provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+      await this.$fire.auth.signInWithPopup(provider);
+      // WHY doesn't this work?
+      this.$router.push('/profile');
     },
   },
 };

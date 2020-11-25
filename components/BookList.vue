@@ -3,8 +3,10 @@
     <ul>
       <li v-for="book in books" :key="book.isbn">
         <i>{{ book.title }}</i> by {{ book.authorFirst }} {{ book.authorLast }}
+        <NuxtLink :to="`/edit/${book.isbn}`">edit</NuxtLink>
       </li>
     </ul>
+    <NuxtLink to="/add">Add Book</NuxtLink>
   </div>
 </template>
 
@@ -13,27 +15,8 @@
 import { mapState } from 'vuex';
 
 export default {
-  /** Get data on Server Side: */
-  async fetch({ app, store }) {
-    if (process.browser) return;
-    try {
-      // Binds it on server side then unbind again to avoid memory leaks on the server.
-      await store.dispatch('bindBooks');
-      store.dispatch('unbindBooks');
-    } catch (e) {
-      console.error(e);
-    }
-  },
   computed: {
     ...mapState(['books']),
-  },
-  /**  Bind Vuexfire on client-side: */
-  async mounted() {
-    try {
-      await this.$store.dispatch('bindBooks');
-    } catch (e) {
-      console.error(e);
-    }
   },
   methods: {
     async writeToRealtimeDb() {

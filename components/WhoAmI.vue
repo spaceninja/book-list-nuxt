@@ -6,6 +6,7 @@
     <button type="button" @click="logout">Log Out</button>
   </div>
   <div v-else>
+    You are logged out.
     <NuxtLink to="/login">Log In</NuxtLink>
   </div>
 </template>
