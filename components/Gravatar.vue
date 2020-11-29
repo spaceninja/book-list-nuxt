@@ -1,4 +1,6 @@
-<template><img :src="emailHash" alt="" width="24" height="24" /></template>
+<template>
+  <img :src="emailHash" alt="" width="24" height="24" />
+</template>
 
 <script>
 import crypto from 'crypto';
