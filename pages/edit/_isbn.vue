@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Edit a Book: {{ $route.params.isbn }}</h2>
-    <h3 v-if="book">{{ book.title }}</h3>
+    <BookEdit v-if="book" v-bind="book" />
     <div v-else>Book not found</div>
   </div>
 </template>
