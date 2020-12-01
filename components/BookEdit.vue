@@ -1,5 +1,5 @@
 <template>
-  <form class="form">
+  <form class="form" @submit.prevent="saveBook">
     <FormInput v-model="title" label="Title" required="true" />
 
     <FormInput v-model="series" label="Series" required="true" />
@@ -74,69 +74,36 @@
     <FormInput v-model="prioritize" label="Prioritize" type="checkbox" />
 
     <div class="form__group form__group--actions form__group--doublewide">
-      <button class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </form>
 </template>
 
 <script>
+import { mapFields } from 'vuex-map-fields';
+
 export default {
-  props: {
-    title: {
-      type: String,
-      default: null,
-    },
-    series: {
-      type: String,
-      default: null,
-    },
-    authorFirst: {
-      type: String,
-      default: null,
-    },
-    authorLast: {
-      type: String,
-      default: null,
-    },
-    rating: {
-      type: Number,
-      default: null,
-    },
-    length: {
-      type: Number,
-      default: null,
-    },
-    isbn: {
-      type: String,
-      default: null,
-    },
-    release: {
-      type: String,
-      default: null,
-    },
-    thumbnail: {
-      type: String,
-      default: null,
-    },
-    textSnippet: {
-      type: String,
-      default: null,
-    },
-    source: {
-      type: String,
-      default: null,
-    },
-    note: {
-      type: String,
-      default: null,
-    },
-    purchased: {
-      type: Boolean,
-      default: false,
-    },
-    prioritize: {
-      type: Boolean,
-      default: false,
+  computed: {
+    ...mapFields([
+      'book.title',
+      'book.series',
+      'book.authorFirst',
+      'book.authorLast',
+      'book.rating',
+      'book.length',
+      'book.isbn',
+      'book.release',
+      'book.thumbnail',
+      'book.textSnippet',
+      'book.source',
+      'book.note',
+      'book.purchased',
+      'book.prioritize',
+    ]),
+  },
+  methods: {
+    saveBook() {
+      this.$emit('save');
     },
   },
 };

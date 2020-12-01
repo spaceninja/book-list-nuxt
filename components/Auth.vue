@@ -28,7 +28,6 @@
 </template>
 
 <script>
-/* eslint-disable no-console */
 import { mapState, mapGetters } from 'vuex';
 
 export default {

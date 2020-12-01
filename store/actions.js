@@ -1,4 +1,4 @@
-/* eslint-disable no-console, no-throw-literal */
+/* eslint-disable no-throw-literal */
 import { firebaseAction } from 'vuexfire';
 
 export default {
@@ -51,6 +51,15 @@ export default {
     commit('SET_AUTH_USER', { authUser });
   },
 
+  setActiveBook({ commit }, book) {
+    console.log('SET ACTIVE BOOK', book && book.title);
+    commit('SET_ACTIVE_BOOK', book);
+  },
+
+  saveBook({ commit }, book) {
+    console.log('SAVE BOOK PLACEHOLDER', book && book.title);
+  },
+
   bindBooks: firebaseAction(function ({ bindFirebaseRef }) {
     console.log('BIND BOOKS');
     return bindFirebaseRef('books', this.$fire.database.ref('books'), {
@@ -59,6 +68,7 @@ export default {
   }),
 
   unbindBooks: firebaseAction(function ({ unbindFirebaseRef }) {
+    console.log('UNBIND BOOKS');
     unbindFirebaseRef('books', false);
   }),
 };

@@ -24,15 +24,17 @@ export default {
     try {
       // Binds it on server side then unbind again to avoid memory leaks on the server.
       await store.dispatch('bindBooks');
+      console.log('BIND BOOKS COMPLETE');
       store.dispatch('unbindBooks');
     } catch (e) {
       console.error(e);
     }
   },
   /**  Bind Vuexfire on client-side: */
-  async mounted() {
+  async created() {
     try {
       await this.$store.dispatch('bindBooks');
+      console.log('BIND BOOKS COMPLETE');
     } catch (e) {
       console.error(e);
     }

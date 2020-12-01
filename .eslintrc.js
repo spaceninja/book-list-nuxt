@@ -16,6 +16,7 @@ module.exports = {
   ],
   plugins: ['prettier'],
   ignorePatterns: ['static/firebase-auth-sw.js'],
-  // add your custom rules here
-  rules: {},
+  rules: {
+    'no-console': 'off',
+  },
 };

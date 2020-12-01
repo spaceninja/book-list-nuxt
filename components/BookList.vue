@@ -11,7 +11,6 @@
 </template>
 
 <script>
-/* eslint-disable no-console */
 import { mapState } from 'vuex';
 
 export default {

@@ -1,19 +1,29 @@
 <template>
   <div>
     <h2>Edit a Book: {{ $route.params.isbn }}</h2>
-    <BookEdit v-if="book" v-bind="book" />
+    <BookEdit v-if="book" @save="saveBook" />
     <div v-else>Book not found</div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   computed: {
-    ...mapState(['books']),
-    book() {
-      return this.books.find((book) => book.isbn === this.$route.params.isbn);
+    ...mapState(['book']),
+    ...mapGetters(['getBookByIsbn']),
+  },
+  mounted() {
+    // When the page mounts, set the active book to the current ISBN
+    this.$store.dispatch(
+      'setActiveBook',
+      this.getBookByIsbn(this.$route.params.isbn)
+    );
+  },
+  methods: {
+    saveBook() {
+      this.$store.dispatch('saveBook', this.book);
     },
   },
 };
