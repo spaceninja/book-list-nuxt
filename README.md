@@ -26,7 +26,9 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - [ ] Handle empty book list
 - [ ] Add sorting
 - [ ] Add filtering
-- [ ] Add editing
-- [ ] Add deleting
-- [ ] Add creation
+- [x] Add editing
+- [x] Add deleting
+- [x] Add creation
 - [ ] Add API looking for new books
+- [ ] Use Vuex modules
+- [ ] Add tests

@@ -1,5 +1,5 @@
 export default () => ({
   authUser: null,
-  books: [],
+  books: {},
   book: {},
 });

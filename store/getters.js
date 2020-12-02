@@ -12,8 +12,8 @@ export default {
   },
 
   getBookByIsbn: (state) => (isbn) => {
-    const theBook = state.books.find((book) => book.isbn === isbn);
-    console.log('GET BOOK BY ISBN', isbn, theBook && theBook.title);
-    return theBook;
+    const book = state.books[isbn];
+    console.log('GET BOOK BY ISBN', isbn, book && book.title);
+    return book;
   },
 };

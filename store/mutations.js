@@ -2,6 +2,23 @@ import { vuexfireMutations } from 'vuexfire';
 import { updateField } from 'vuex-map-fields';
 import initialState from './state';
 
+const emptyBook = {
+  title: '',
+  series: '',
+  authorFirst: '',
+  authorLast: '',
+  rating: '',
+  length: '',
+  isbn: '',
+  release: '',
+  thumbnail: '',
+  textSnippet: '',
+  source: '',
+  note: '',
+  purchased: false,
+  prioritize: false,
+};
+
 export default {
   ...vuexfireMutations,
   updateField,
@@ -11,7 +28,7 @@ export default {
   },
 
   SET_ACTIVE_BOOK: (state, book) => {
-    state.book = book;
+    state.book = { ...emptyBook, ...book };
   },
 
   SET_AUTH_USER: (state, { authUser }) => {

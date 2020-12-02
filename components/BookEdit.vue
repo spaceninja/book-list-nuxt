@@ -2,7 +2,7 @@
   <form class="form" @submit.prevent="saveBook">
     <FormInput v-model="title" label="Title" required="true" />
 
-    <FormInput v-model="series" label="Series" required="true" />
+    <FormInput v-model="series" label="Series" />
 
     <FormInput
       v-model="authorFirst"

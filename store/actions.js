@@ -56,8 +56,24 @@ export default {
     commit('SET_ACTIVE_BOOK', book);
   },
 
-  saveBook({ commit }, book) {
-    console.log('SAVE BOOK PLACEHOLDER', book && book.title);
+  async deleteBook({ commit, state }) {
+    const book = state.book;
+    try {
+      await this.$fire.database.ref(`books/${book.isbn}`).remove();
+      console.log('DELETED BOOK', book && book.title);
+    } catch (e) {
+      alert(e);
+    }
+  },
+
+  async saveBook({ commit, state }) {
+    const book = state.book;
+    try {
+      await this.$fire.database.ref(`books/${book.isbn}`).set(book);
+      console.log('SAVED BOOK', book && book.title);
+    } catch (e) {
+      alert(e);
+    }
   },
 
   bindBooks: firebaseAction(function ({ bindFirebaseRef }) {

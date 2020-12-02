@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>Edit a Book: {{ $route.params.isbn }}</h2>
-    <BookEdit v-if="book" @save="saveBook" />
+    <h2>Delete a Book: {{ $route.params.isbn }}</h2>
+    <BookDelete v-if="book" @delete="deleteBook" />
     <div v-else>Book not found</div>
   </div>
 </template>
@@ -22,8 +22,8 @@ export default {
     );
   },
   methods: {
-    async saveBook() {
-      await this.$store.dispatch('saveBook', this.book);
+    async deleteBook() {
+      await this.$store.dispatch('deleteBook', this.book);
       this.$router.push('/');
     },
   },
