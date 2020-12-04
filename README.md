@@ -23,12 +23,12 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - [x] Sync database to Vuex
 - [ ] Handle other logins
 - [ ] Handle Logged-Out
-- [ ] Handle empty book list
+- [x] Handle empty book list
 - [ ] Add sorting
 - [ ] Add filtering
 - [x] Add editing
 - [x] Add deleting
 - [x] Add creation
 - [ ] Add API looking for new books
-- [ ] Use Vuex modules
+- [x] Use Vuex modules
 - [ ] Add tests

@@ -1,6 +1,6 @@
 <template>
   <Auth v-if="!isLoggedIn" />
-  <div v-else>You are logged in.</div>
+  <Alert v-else>You are logged in.</Alert>
 </template>
 
 <script>

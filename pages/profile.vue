@@ -4,7 +4,7 @@
     <p>This page is only for you.</p>
     <p>Your e-mail is {{ authUser.email }}</p>
   </div>
-  <div v-else>You are logged out</div>
+  <Alert v-else>You are logged out.</Alert>
 </template>
 
 <script>

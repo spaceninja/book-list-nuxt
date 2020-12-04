@@ -56,6 +56,11 @@ export default {
     commit('SET_ACTIVE_BOOK', book);
   },
 
+  unSetActiveBook({ commit }) {
+    console.log('UNSET ACTIVE BOOK');
+    commit('UNSET_ACTIVE_BOOK');
+  },
+
   async deleteBook({ commit, state }) {
     const book = state.book;
     try {

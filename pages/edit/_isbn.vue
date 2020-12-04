@@ -1,8 +1,8 @@
 <template>
   <div>
     <h2>Edit a Book: {{ $route.params.isbn }}</h2>
-    <BookEdit v-if="book" @save="saveBook" />
-    <div v-else>Book not found</div>
+    <BookEdit v-if="book.isbn" @save="saveBook" />
+    <Alert v-else :is-error="true">Book not found.</Alert>
   </div>
 </template>
 

@@ -31,6 +31,10 @@ export default {
     state.book = { ...emptyBook, ...book };
   },
 
+  UNSET_ACTIVE_BOOK: (state) => {
+    state.book = {};
+  },
+
   SET_AUTH_USER: (state, { authUser }) => {
     console.log('SET AUTH USER', authUser.email);
     state.authUser = {
