@@ -44,10 +44,11 @@ export default {
 
   onAuthStateChanged({ commit }, { authUser }) {
     if (!authUser) {
-      commit('RESET_STORE');
+      console.log('UNSET AUTH USER');
+      commit('UNSET_AUTH_USER');
       return;
     }
-    console.log('AuthStateChangedAction', authUser.email);
+    console.log('SET AUTH USER', authUser.email);
     commit('SET_AUTH_USER', { authUser });
   },
 
@@ -82,7 +83,7 @@ export default {
   },
 
   bindBooks: firebaseAction(function ({ bindFirebaseRef }) {
-    console.log('BIND BOOKS');
+    console.log('BIND BOOKS', process.server ? 'SERVER' : 'CLIENT');
     return bindFirebaseRef('books', this.$fire.database.ref('books'), {
       wait: true,
     });

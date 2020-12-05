@@ -6,16 +6,17 @@
     <Alert v-else>
       There are no books in the list yet. Why don’t you add one?
     </Alert>
-    <NuxtLink to="/add">Add Book</NuxtLink>
+    <NuxtLink v-if="isLoggedIn" to="/add">Add Book</NuxtLink>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   computed: {
     ...mapState(['books']),
+    ...mapGetters(['isLoggedIn']),
   },
 };
 </script>

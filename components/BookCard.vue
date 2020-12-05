@@ -1,12 +1,16 @@
 <template>
   <li>
     <i>{{ title }}</i> by {{ authorFirst }} {{ authorLast }}
-    <NuxtLink :to="`/edit/${isbn}`">edit</NuxtLink>
-    <NuxtLink :to="`/delete/${isbn}`">delete</NuxtLink>
+    <span v-if="isLoggedIn">
+      <NuxtLink :to="`/edit/${isbn}`">edit</NuxtLink>
+      <NuxtLink :to="`/delete/${isbn}`">delete</NuxtLink>
+    </span>
   </li>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   props: {
     title: {
@@ -65,6 +69,9 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  computed: {
+    ...mapGetters(['isLoggedIn']),
   },
 };
 </script>

@@ -18,23 +18,27 @@
 
 <script>
 export default {
-  /** Get data on Server Side: */
-  async fetch({ app, store }) {
+  /** Get Data on Server Side: */
+  async fetch() {
     if (process.browser) return;
+    console.log('SSR', process.server);
     try {
-      // Binds it on server side then unbind again to avoid memory leaks on the server.
-      await store.dispatch('bindBooks');
-      console.log('BIND BOOKS COMPLETE');
-      store.dispatch('unbindBooks');
+      // Bind Vuexfire on server side, then unbind to avoid server memory leaks.
+      await this.$store.dispatch('bindBooks');
+      console.log('BIND BOOKS COMPLETE', process.server ? 'SERVER' : 'CLIENT');
+      this.$store.dispatch('unbindBooks');
     } catch (e) {
       console.error(e);
     }
   },
-  /**  Bind Vuexfire on client-side: */
+  /** Get Data on Client Side: */
   async created() {
+    if (process.server) return;
+    console.log('CLIENT', process.client);
     try {
+      // Bind Vuexfire on client side
       await this.$store.dispatch('bindBooks');
-      console.log('BIND BOOKS COMPLETE');
+      console.log('BIND BOOKS COMPLETE', process.server ? 'SERVER' : 'CLIENT');
     } catch (e) {
       console.error(e);
     }

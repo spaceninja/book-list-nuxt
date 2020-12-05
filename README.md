@@ -21,8 +21,8 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 - [x] Add basic authentication
 - [x] Sync database to Vuex
-- [ ] Handle other logins
-- [ ] Handle Logged-Out
+- [ ] Clean up Login
+- [x] Handle Logged-Out
 - [x] Handle empty book list
 - [ ] Add sorting
 - [ ] Add filtering
@@ -32,3 +32,5 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - [ ] Add API looking for new books
 - [x] Use Vuex modules
 - [ ] Add tests
+- [ ] Update Book Card markup
+- [ ] Add styles

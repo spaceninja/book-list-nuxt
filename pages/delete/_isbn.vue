@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="isLoggedIn">
     <h2>Delete a Book: {{ $route.params.isbn }}</h2>
     <BookDelete v-if="book.isbn" @delete="deleteBook" />
     <Alert v-else :is-error="true">Book not found.</Alert>
@@ -12,7 +12,7 @@ import { mapState, mapGetters } from 'vuex';
 export default {
   computed: {
     ...mapState(['book']),
-    ...mapGetters(['getBookByIsbn']),
+    ...mapGetters(['getBookByIsbn', 'isLoggedIn']),
   },
   mounted() {
     // When the page mounts, set the active book to the current ISBN

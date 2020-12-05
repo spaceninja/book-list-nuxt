@@ -1,16 +1,17 @@
 <template>
-  <div>
+  <div v-if="isLoggedIn">
     <h2>Add a Book</h2>
     <BookEdit @save="saveBook" />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   computed: {
     ...mapState(['book']),
+    ...mapGetters(['isLoggedIn']),
   },
   mounted() {
     // When the page mounts, empty the active book object
