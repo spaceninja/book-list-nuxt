@@ -1,7 +1,8 @@
 <template>
   <li>
-    <i>{{ title }}</i> by {{ authorFirst }} {{ authorLast }}
-    <span v-if="isLoggedIn">
+    <i>{{ title }}</i> by {{ authorFirst }} {{ authorLast }}, {{ length }}pp,
+    {{ rating }}
+    <span v-if="isLoggedIn && isEditable">
       <NuxtLink :to="`/edit/${isbn}`">edit</NuxtLink>
       <NuxtLink :to="`/delete/${isbn}`">delete</NuxtLink>
     </span>
@@ -68,6 +69,10 @@ export default {
     prioritize: {
       type: Boolean,
       default: false,
+    },
+    isEditable: {
+      type: Boolean,
+      default: true,
     },
   },
   computed: {
