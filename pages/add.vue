@@ -1,6 +1,5 @@
 <template>
   <div v-if="isLoggedIn">
-    <h2>Add a Book</h2>
     <BookEdit @save="saveBook" />
   </div>
 </template>

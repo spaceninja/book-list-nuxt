@@ -68,7 +68,7 @@ export default {
       await this.$fire.database.ref(`books/${book.isbn}`).remove();
       console.log('DELETED BOOK', book && book.title);
     } catch (e) {
-      alert(e);
+      console.error(e);
     }
   },
 
@@ -78,7 +78,7 @@ export default {
       await this.$fire.database.ref(`books/${book.isbn}`).set(book);
       console.log('SAVED BOOK', book && book.title);
     } catch (e) {
-      alert(e);
+      console.error(e);
     }
   },
 

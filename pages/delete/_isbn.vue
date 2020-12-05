@@ -1,6 +1,5 @@
 <template>
   <div v-if="isLoggedIn">
-    <h2>Delete a Book: {{ $route.params.isbn }}</h2>
     <BookDelete v-if="book.isbn" @delete="deleteBook" />
     <Alert v-else :is-error="true">Book not found.</Alert>
   </div>
