@@ -13,8 +13,9 @@ module.exports = {
     'prettier/vue',
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
+    'plugin:testing-library/vue',
   ],
-  plugins: ['prettier'],
+  plugins: ['prettier', 'testing-library'],
   ignorePatterns: ['static/firebase-auth-sw.js'],
   rules: {
     'no-console': 'off',
