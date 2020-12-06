@@ -72,7 +72,7 @@ export default {
     },
     isEditable: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
   computed: {

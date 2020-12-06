@@ -2,22 +2,21 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/vue';
 import Alert from '@/components/Alert.vue';
 
+const slotContent = 'This is an Alert!';
+
 describe('Alert.vue', () => {
   it('renders slot content', () => {
-    const msg = 'This is an Alert!';
-    const container = render(Alert, {
-      slots: { default: msg },
+    const { getByText } = render(Alert, {
+      slots: { default: slotContent },
     });
-    container.getByText(msg);
+    getByText(slotContent);
   });
 
   it('renders an error', () => {
-    const msg = 'This is an Error!';
-    const container = render(Alert, {
-      slots: { default: msg },
+    const { getByText } = render(Alert, {
+      slots: { default: slotContent },
       props: { isError: true },
     });
-    const alert = container.getByText(msg);
-    expect(alert).toHaveClass('alert--error');
+    expect(getByText(slotContent)).toHaveClass('alert--error');
   });
 });

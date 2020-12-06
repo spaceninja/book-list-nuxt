@@ -1,7 +1,12 @@
 <template>
   <div>
     <ol v-if="books">
-      <BookCard v-for="book in books" :key="book.isbn" v-bind="book" />
+      <BookCard
+        v-for="book in books"
+        :key="book.isbn"
+        v-bind="book"
+        :is-editable="true"
+      />
     </ol>
     <Alert v-else>
       There are no books in the list yet. Why don’t you add one?
