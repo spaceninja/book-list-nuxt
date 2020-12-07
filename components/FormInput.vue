@@ -23,7 +23,7 @@
         v-if="isTextarea"
         :id="uuid"
         :value="value"
-        class="form__control"
+        class="form__control form__control--textarea"
         v-bind="$attrs"
         @input="$emit('input', $event.target.value)"
       />
@@ -51,10 +51,6 @@
       </span>
     </span>
 
-    <small v-if="help" class="form__help">
-      {{ help }}
-    </small>
-
     <label
       v-if="isCheckbox"
       class="form__label form__checkbox-label"
@@ -62,6 +58,10 @@
     >
       {{ label }}
     </label>
+
+    <small v-if="help" class="form__help">
+      {{ help }}
+    </small>
   </div>
 </template>
 
