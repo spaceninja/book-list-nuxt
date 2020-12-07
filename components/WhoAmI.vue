@@ -3,7 +3,7 @@
     You are logged in as
     <Gravatar :email="authUser.email" align="center" />
     {{ authUser.email }}.
-    <button type="button" @click="logout">Log Out</button>
+    <button type="button" @click="signOut">Log Out</button>
   </div>
   <div v-else>
     You are logged out.
@@ -12,30 +12,14 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 export default {
   computed: {
     ...mapState(['authUser']),
     ...mapGetters(['isLoggedIn']),
   },
   methods: {
-    async logout() {
-      try {
-        await this.$fire.auth.signOut();
-      } catch (e) {
-        console.error(e);
-      }
-    },
-    async signInWithGitHub() {
-      const provider = new this.$fireModule.auth.GithubAuthProvider();
-      try {
-        // You can add or remove more scopes here:
-        // provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-        await this.$fire.auth.signInWithPopup(provider);
-      } catch (e) {
-        console.error(e);
-      }
-    },
+    ...mapActions(['signOut', 'signInWithGitHub']),
   },
 };
 </script>

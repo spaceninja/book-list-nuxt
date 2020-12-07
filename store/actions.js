@@ -52,6 +52,29 @@ export default {
     commit('SET_AUTH_USER', { authUser });
   },
 
+  async signOut() {
+    console.log('LOG OUT');
+    try {
+      await this.$fire.auth.signOut();
+      console.log('LOGGED OUT');
+    } catch (e) {
+      console.error(e);
+    }
+  },
+
+  async signInWithGitHub() {
+    console.log('LOG IN');
+    const provider = new this.$fireModule.auth.GithubAuthProvider();
+    try {
+      // You can add or remove more scopes here:
+      // provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+      await this.$fire.auth.signInWithPopup(provider);
+      console.log('LOGGED IN');
+    } catch (e) {
+      console.error(e);
+    }
+  },
+
   setActiveBook({ commit }, book) {
     console.log('SET ACTIVE BOOK', book && book.title);
     commit('SET_ACTIVE_BOOK', book);
