@@ -1,11 +1,11 @@
 <template>
   <div v-if="isLoggedIn">
-    <BookEdit @save="saveBook" />
+    <BookEdit @save="handleSave" />
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
@@ -14,11 +14,12 @@ export default {
   },
   mounted() {
     // When the page mounts, empty the active book object
-    this.$store.dispatch('setActiveBook', {});
+    this.setActiveBook({});
   },
   methods: {
-    async saveBook() {
-      await this.$store.dispatch('saveBook', this.book);
+    ...mapActions(['saveBook', 'setActiveBook']),
+    async handleSave() {
+      await this.saveBook(this.book);
       this.$router.push('/');
     },
   },
