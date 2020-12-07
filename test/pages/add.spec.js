@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/vue';
-import AddPage from '@/pages/Add.vue';
+import AddPage from '@/pages/add.vue';
 
 const actions = {
   saveBook: jest.fn(),
