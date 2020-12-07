@@ -28,12 +28,12 @@ describe('BookDelete.vue', () => {
     expect(getByTestId('book-card')).toHaveAttribute('title', book.title);
   });
 
-  it('emits delete event when clicked', async () => {
+  it('emits delete event when confirm button is clicked', async () => {
     const { getByRole, emitted } = render(BookDelete, {
       computed: { book: () => book },
       stubs,
     });
     await fireEvent.click(getByRole('button'));
-    expect(emitted('delete'));
+    expect(emitted().delete).toBeTruthy();
   });
 });

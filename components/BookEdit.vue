@@ -111,7 +111,16 @@ export default {
   },
   methods: {
     saveBook() {
-      this.$emit('save');
+      if (
+        this.isbn &&
+        this.title &&
+        this.authorFirst &&
+        this.authorLast &&
+        this.rating &&
+        this.length
+      ) {
+        this.$emit('save');
+      }
     },
   },
 };
