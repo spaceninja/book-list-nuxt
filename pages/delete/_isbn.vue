@@ -1,12 +1,12 @@
 <template>
   <div v-if="isLoggedIn">
-    <BookDelete v-if="book.isbn" @delete="deleteBook" />
+    <BookDelete v-if="book && book.isbn" @delete="handleDelete" />
     <Alert v-else :is-error="true">Book not found.</Alert>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
@@ -15,14 +15,12 @@ export default {
   },
   mounted() {
     // When the page mounts, set the active book to the current ISBN
-    this.$store.dispatch(
-      'setActiveBook',
-      this.getBookByIsbn(this.$route.params.isbn)
-    );
+    this.setActiveBook(this.getBookByIsbn(this.$route.params.isbn));
   },
   methods: {
-    async deleteBook() {
-      await this.$store.dispatch('deleteBook', this.book);
+    ...mapActions(['deleteBook', 'setActiveBook']),
+    async handleDelete() {
+      await this.deleteBook(this.book);
       this.$router.push('/');
     },
   },

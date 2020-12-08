@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import { render, fireEvent } from '@testing-library/vue';
-import EditPage from '@/pages/edit/_isbn.vue';
-import BookEdit from '@/components/BookEdit.vue';
-import FormInput from '@/components/FormInput.vue';
+import DeletePage from '@/pages/delete/_isbn.vue';
+import BookDelete from '@/components/BookDelete.vue';
+import { RouterLinkStub } from '@vue/test-utils';
 
 jest.mock('vuex-map-fields', () => ({
   getterType: jest.fn(),
@@ -20,13 +20,13 @@ const $route = {
 };
 
 const actions = {
-  saveBook: jest.fn(),
+  deleteBook: jest.fn(),
   setActiveBook: jest.fn(),
 };
 
 const stubs = {
-  BookEdit: {
-    template: '<div data-testid="book-edit" />',
+  BookDelete: {
+    template: '<div data-testid="book-delete" />',
   },
   Alert: {
     template: '<div data-testid="alert" />',
@@ -42,9 +42,9 @@ const book = {
   isbn: '123',
 };
 
-describe('pages/edit/_isbn.vue', () => {
-  it('shows edit form if logged in', () => {
-    const { getByTestId } = render(EditPage, {
+describe('pages/delete/_isbn.vue', () => {
+  it('shows delete form if logged in', () => {
+    const { getByTestId } = render(DeletePage, {
       computed: {
         book: () => book,
         getBookByIsbn: () => () => book,
@@ -54,11 +54,11 @@ describe('pages/edit/_isbn.vue', () => {
       store: { actions },
       stubs,
     });
-    getByTestId('book-edit');
+    getByTestId('book-delete');
   });
 
-  it('hides edit form if logged out', () => {
-    const { queryByTestId } = render(EditPage, {
+  it('hides delete form if logged out', () => {
+    const { queryByTestId } = render(DeletePage, {
       computed: {
         getBookByIsbn: () => () => book,
         isLoggedIn: () => false,
@@ -67,11 +67,11 @@ describe('pages/edit/_isbn.vue', () => {
       store: { actions },
       stubs,
     });
-    expect(queryByTestId('book-edit')).not.toBeInTheDocument();
+    expect(queryByTestId('book-delete')).not.toBeInTheDocument();
   });
 
   it('shows error if book not found', () => {
-    const { getByTestId } = render(EditPage, {
+    const { getByTestId } = render(DeletePage, {
       computed: {
         getBookByIsbn: () => () => book,
         isLoggedIn: () => true,
@@ -83,8 +83,8 @@ describe('pages/edit/_isbn.vue', () => {
     getByTestId('alert');
   });
 
-  it('can save book', async () => {
-    const { getByRole, getByLabelText } = render(EditPage, {
+  it('can delete book', async () => {
+    const { getByRole } = render(DeletePage, {
       computed: {
         book: () => book,
         getBookByIsbn: () => () => book,
@@ -92,7 +92,7 @@ describe('pages/edit/_isbn.vue', () => {
       },
       mocks: { $route, $router },
       store: { actions },
-      stubs: { BookEdit, FormInput },
+      stubs: { BookDelete, NuxtLink: RouterLinkStub, BookCard: true },
     });
 
     // mounted lifecycle hook sets book to ISBN from URL
@@ -101,26 +101,9 @@ describe('pages/edit/_isbn.vue', () => {
       book // The book fetched by getBookByIsbn
     );
 
-    // fill out the form by hand because we stubbed the Vuex functions
-    const isbn = getByLabelText('ISBN');
-    const title = getByLabelText('Title');
-    const authorFirst = getByLabelText('Author First Name');
-    const authorLast = getByLabelText('Author Last Name');
-    const rating = getByLabelText('Rating');
-    const length = getByLabelText('Length');
-    await Promise.all([
-      /* eslint-disable testing-library/await-fire-event */
-      fireEvent.update(isbn, book.isbn),
-      fireEvent.update(title, book.title),
-      fireEvent.update(authorFirst, book.authorFirst),
-      fireEvent.update(authorLast, book.authorLast),
-      fireEvent.update(rating, book.rating),
-      fireEvent.update(length, book.length),
-    ]);
-
-    // save action trigger
+    // delete action trigger
     await fireEvent.click(getByRole('button'));
-    expect(actions.saveBook).toHaveBeenCalledWith(
+    expect(actions.deleteBook).toHaveBeenCalledWith(
       expect.any(Object), // The Vuex context
       book
     );
