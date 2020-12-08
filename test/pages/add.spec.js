@@ -36,8 +36,8 @@ const book = {
 describe('pages/add.vue', () => {
   it('shows add form if logged in', () => {
     const { getByTestId } = render(AddPage, {
-      store: { actions },
       computed: { isLoggedIn: () => true },
+      store: { actions },
       stubs,
     });
     getByTestId('book-edit');
@@ -45,24 +45,19 @@ describe('pages/add.vue', () => {
 
   it('hides add form if logged out', () => {
     const { queryByTestId } = render(AddPage, {
-      store: { actions },
       computed: { isLoggedIn: () => false },
+      store: { actions },
       stubs,
     });
     expect(queryByTestId('book-edit')).not.toBeInTheDocument();
   });
 
-  test('can save book', async () => {
+  it('can save book', async () => {
     const { getByRole, getByLabelText } = render(AddPage, {
-      store: { actions },
       computed: { isLoggedIn: () => true },
-      stubs: {
-        BookEdit,
-        FormInput,
-      },
-      mocks: {
-        $router,
-      },
+      mocks: { $router },
+      store: { actions },
+      stubs: { BookEdit, FormInput },
     });
 
     // mounted lifecycle hook sets book to empty
@@ -70,17 +65,20 @@ describe('pages/add.vue', () => {
 
     // fill out the form
     const isbn = getByLabelText('ISBN');
-    await fireEvent.update(isbn, book.isbn);
     const title = getByLabelText('Title');
-    await fireEvent.update(title, book.title);
     const authorFirst = getByLabelText('Author First Name');
-    await fireEvent.update(authorFirst, book.authorFirst);
     const authorLast = getByLabelText('Author Last Name');
-    await fireEvent.update(authorLast, book.authorLast);
     const rating = getByLabelText('Rating');
-    await fireEvent.update(rating, book.rating);
     const length = getByLabelText('Length');
-    await fireEvent.update(length, book.length);
+    await Promise.all([
+      /* eslint-disable testing-library/await-fire-event */
+      fireEvent.update(isbn, book.isbn),
+      fireEvent.update(title, book.title),
+      fireEvent.update(authorFirst, book.authorFirst),
+      fireEvent.update(authorLast, book.authorLast),
+      fireEvent.update(rating, book.rating),
+      fireEvent.update(length, book.length),
+    ]);
 
     // save action trigger
     await fireEvent.click(getByRole('button'));
