@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, fireEvent } from '@testing-library/vue';
-import AddPage from '@/pages/add.vue';
+import EditPage from '@/pages/edit/_isbn.vue';
 import BookEdit from '@/components/BookEdit.vue';
 import FormInput from '@/components/FormInput.vue';
 
@@ -11,6 +11,12 @@ jest.mock('vuex-map-fields', () => ({
 
 const $router = {
   push: jest.fn(),
+};
+
+const $route = {
+  params: {
+    isbn: '123',
+  },
 };
 
 const actions = {
@@ -33,19 +39,28 @@ const book = {
   isbn: '123',
 };
 
-describe('pages/add.vue', () => {
-  it('shows add form if logged in', () => {
-    const { getByTestId } = render(AddPage, {
-      computed: { isLoggedIn: () => true },
+describe('pages/edit/_isbn.vue', () => {
+  it('shows edit form if logged in', () => {
+    const { getByTestId } = render(EditPage, {
+      computed: {
+        book: () => book,
+        getBookByIsbn: () => () => book,
+        isLoggedIn: () => true,
+      },
+      mocks: { $route },
       store: { actions },
       stubs,
     });
     getByTestId('book-edit');
   });
 
-  it('hides add form if logged out', () => {
-    const { queryByTestId } = render(AddPage, {
-      computed: { isLoggedIn: () => false },
+  it('hides edit form if logged out', () => {
+    const { queryByTestId } = render(EditPage, {
+      computed: {
+        getBookByIsbn: () => () => book,
+        isLoggedIn: () => false,
+      },
+      mocks: { $route },
       store: { actions },
       stubs,
     });
@@ -53,12 +68,13 @@ describe('pages/add.vue', () => {
   });
 
   it('can save book', async () => {
-    const { getByRole, getByLabelText } = render(AddPage, {
+    const { getByRole, getByLabelText } = render(EditPage, {
       computed: {
         book: () => book,
+        getBookByIsbn: () => () => book,
         isLoggedIn: () => true,
       },
-      mocks: { $router },
+      mocks: { $route, $router },
       store: { actions },
       stubs: { BookEdit, FormInput },
     });
@@ -66,10 +82,10 @@ describe('pages/add.vue', () => {
     // mounted lifecycle hook sets book to empty
     expect(actions.setActiveBook).toHaveBeenCalledWith(
       expect.any(Object), // The Vuex context
-      {} // Empty book
+      book // The book fetched by getBookByIsbn
     );
 
-    // fill out the form
+    // fill out the form by hand because we stubbed the Vuex functions
     const isbn = getByLabelText('ISBN');
     const title = getByLabelText('Title');
     const authorFirst = getByLabelText('Author First Name');
