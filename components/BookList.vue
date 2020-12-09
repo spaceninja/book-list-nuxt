@@ -1,8 +1,8 @@
 <template>
   <div>
-    <ol v-if="books">
+    <ol v-if="allBooks">
       <BookCard
-        v-for="book in books"
+        v-for="book in allBooks"
         :key="book.isbn"
         v-bind="book"
         :is-editable="true"
@@ -16,11 +16,12 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { createNamespacedHelpers, mapGetters } from 'vuex';
+const { mapState: mapBookState } = createNamespacedHelpers('books');
 
 export default {
   computed: {
-    ...mapState(['books']),
+    ...mapBookState(['allBooks']),
     ...mapGetters(['isLoggedIn']),
   },
 };

@@ -25,7 +25,7 @@ const books = {
 describe('BookList.vue', () => {
   it('renders book list', () => {
     const { getAllByTestId } = render(BookList, {
-      computed: { books: () => books, isLoggedIn: () => false },
+      computed: { allBooks: () => books, isLoggedIn: () => false },
       stubs: {
         BookCard: {
           template: '<div data-testid="book-card" />',
@@ -40,7 +40,7 @@ describe('BookList.vue', () => {
 
   it('shows error if there are no books', () => {
     const { getByText } = render(BookList, {
-      computed: { books: () => {}, isLoggedIn: () => false },
+      computed: { allBooks: () => {}, isLoggedIn: () => false },
       stubs: ['Alert'],
     });
     getByText(/There are no books/);
@@ -48,7 +48,7 @@ describe('BookList.vue', () => {
 
   it('displays add book link when logged in', () => {
     const { getByText } = render(BookList, {
-      computed: { books: () => {}, isLoggedIn: () => true },
+      computed: { allBooks: () => {}, isLoggedIn: () => true },
       stubs: { Alert: true, NuxtLink: RouterLinkStub },
     });
     getByText('Add Book');
@@ -56,7 +56,7 @@ describe('BookList.vue', () => {
 
   it('hides add book link when logged out', () => {
     const { queryByText } = render(BookList, {
-      computed: { books: () => {}, isLoggedIn: () => false },
+      computed: { allBooks: () => {}, isLoggedIn: () => false },
       stubs: ['Alert'],
     });
     expect(queryByText('Add Book')).not.toBeInTheDocument();

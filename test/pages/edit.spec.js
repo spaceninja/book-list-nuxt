@@ -46,7 +46,7 @@ describe('pages/edit/_isbn.vue', () => {
   it('shows edit form if logged in', () => {
     const { getByTestId } = render(EditPage, {
       computed: {
-        book: () => book,
+        selectedBook: () => book,
         getBookByIsbn: () => () => book,
         isLoggedIn: () => true,
       },
@@ -73,6 +73,7 @@ describe('pages/edit/_isbn.vue', () => {
   it('shows error if book not found', () => {
     const { getByTestId } = render(EditPage, {
       computed: {
+        selectedBook: () => null,
         getBookByIsbn: () => () => book,
         isLoggedIn: () => true,
       },
@@ -86,7 +87,7 @@ describe('pages/edit/_isbn.vue', () => {
   it('can save book', async () => {
     const { getByRole, getByLabelText } = render(EditPage, {
       computed: {
-        book: () => book,
+        selectedBook: () => book,
         getBookByIsbn: () => () => book,
         isLoggedIn: () => true,
       },

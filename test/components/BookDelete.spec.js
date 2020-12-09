@@ -22,7 +22,7 @@ const stubs = {
 describe('BookDelete.vue', () => {
   it('renders book content', () => {
     const { getByTestId } = render(BookDelete, {
-      computed: { book: () => book },
+      computed: { selectedBook: () => book },
       stubs,
     });
     expect(getByTestId('book-card')).toHaveAttribute('title', book.title);
@@ -30,7 +30,7 @@ describe('BookDelete.vue', () => {
 
   it('emits delete event when confirm button is clicked', async () => {
     const { getByRole, emitted } = render(BookDelete, {
-      computed: { book: () => book },
+      computed: { selectedBook: () => book },
       stubs,
     });
     await fireEvent.click(getByRole('button'));

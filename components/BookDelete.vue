@@ -2,7 +2,7 @@
   <div>
     <h2>Delete Book</h2>
     <p>Are you sure you want to delete this book?</p>
-    <BookCard v-bind="book" />
+    <BookCard v-bind="selectedBook" />
     <button type="button" @click="confirmDelete">Yes</button>
     <NuxtLink to="/">No</NuxtLink>
   </div>
@@ -13,7 +13,7 @@ import { mapState } from 'vuex';
 
 export default {
   computed: {
-    ...mapState(['book']),
+    ...mapState({ selectedBook: (state) => state.books.selectedBook }),
   },
   methods: {
     confirmDelete() {

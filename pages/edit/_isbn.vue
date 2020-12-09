@@ -1,6 +1,6 @@
 <template>
   <div v-if="isLoggedIn">
-    <BookEdit v-if="book && book.isbn" @save="handleSave" />
+    <BookEdit v-if="selectedBook && selectedBook.isbn" @save="handleSave" />
     <Alert v-else :is-error="true">Book not found.</Alert>
   </div>
 </template>
@@ -10,7 +10,7 @@ import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
-    ...mapState(['book']),
+    ...mapState({ selectedBook: (state) => state.books.selectedBook }),
     ...mapGetters(['getBookByIsbn', 'isLoggedIn']),
   },
   mounted() {
@@ -20,7 +20,7 @@ export default {
   methods: {
     ...mapActions(['saveBook', 'setActiveBook']),
     async handleSave() {
-      await this.saveBook(this.book);
+      await this.saveBook(this.selectedBook);
       this.$router.push('/');
     },
   },

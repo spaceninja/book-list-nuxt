@@ -9,7 +9,7 @@ import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
-    ...mapState(['book']),
+    ...mapState({ selectedBook: (state) => state.books.selectedBook }),
     ...mapGetters(['isLoggedIn']),
   },
   mounted() {
@@ -19,7 +19,7 @@ export default {
   methods: {
     ...mapActions(['saveBook', 'setActiveBook']),
     async handleSave() {
-      await this.saveBook(this.book);
+      await this.saveBook(this.selectedBook);
       this.$router.push('/');
     },
   },

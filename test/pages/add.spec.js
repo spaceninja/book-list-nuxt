@@ -55,7 +55,7 @@ describe('pages/add.vue', () => {
   it('can save book', async () => {
     const { getByRole, getByLabelText } = render(AddPage, {
       computed: {
-        book: () => book,
+        selectedBook: () => book,
         isLoggedIn: () => true,
       },
       mocks: { $router },

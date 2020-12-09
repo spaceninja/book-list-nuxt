@@ -22,14 +22,6 @@ export default {
   ...vuexfireMutations,
   updateField,
 
-  SET_ACTIVE_BOOK: (state, book) => {
-    state.book = { ...emptyBook, ...book };
-  },
-
-  UNSET_ACTIVE_BOOK: (state) => {
-    state.book = {};
-  },
-
   SET_AUTH_USER: (state, { authUser }) => {
     state.authUser = {
       uid: authUser.uid,
@@ -39,5 +31,13 @@ export default {
 
   UNSET_AUTH_USER: (state) => {
     state.authUser = null;
+  },
+
+  SET_ACTIVE_BOOK: (state, book) => {
+    state.books.selectedBook = { ...emptyBook, ...book };
+  },
+
+  UNSET_ACTIVE_BOOK: (state) => {
+    state.books.selectedBook = {};
   },
 };

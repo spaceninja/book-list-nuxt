@@ -1,6 +1,9 @@
 <template>
   <div v-if="isLoggedIn">
-    <BookDelete v-if="book && book.isbn" @delete="handleDelete" />
+    <BookDelete
+      v-if="selectedBook && selectedBook.isbn"
+      @delete="handleDelete"
+    />
     <Alert v-else :is-error="true">Book not found.</Alert>
   </div>
 </template>
@@ -10,7 +13,7 @@ import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
-    ...mapState(['book']),
+    ...mapState({ selectedBook: (state) => state.books.selectedBook }),
     ...mapGetters(['getBookByIsbn', 'isLoggedIn']),
   },
   mounted() {
@@ -20,7 +23,7 @@ export default {
   methods: {
     ...mapActions(['deleteBook', 'setActiveBook']),
     async handleDelete() {
-      await this.deleteBook(this.book);
+      await this.deleteBook(this.selectedBook);
       this.$router.push('/');
     },
   },

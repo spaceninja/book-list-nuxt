@@ -100,13 +100,13 @@ export default {
 
   bindBooks: firebaseAction(function ({ bindFirebaseRef }) {
     console.log('BIND BOOKS', process.server ? 'SERVER' : 'CLIENT');
-    return bindFirebaseRef('books', this.$fire.database.ref('books'), {
+    return bindFirebaseRef('books.allBooks', this.$fire.database.ref('books'), {
       wait: true,
     });
   }),
 
   unbindBooks: firebaseAction(function ({ unbindFirebaseRef }) {
     console.log('UNBIND BOOKS');
-    unbindFirebaseRef('books', false);
+    unbindFirebaseRef('books.allBooks', false);
   }),
 };
