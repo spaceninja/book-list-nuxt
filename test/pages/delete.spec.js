@@ -2,6 +2,7 @@ import '@testing-library/jest-dom';
 import { render, fireEvent } from '@testing-library/vue';
 import DeletePage from '@/pages/delete/_isbn.vue';
 import BookDelete from '@/components/BookDelete.vue';
+import BookCard from '@/components/BookCard.vue';
 import { RouterLinkStub } from '@vue/test-utils';
 
 jest.mock('vuex-map-fields', () => ({
@@ -84,31 +85,33 @@ describe('pages/delete/_isbn.vue', () => {
     getByTestId('alert');
   });
 
-  // TODO: Why is this test failing?
-  // it('can delete book', async () => {
-  //   const { getByRole } = render(DeletePage, {
-  //     computed: {
-  //       selectedBook: () => book,
-  //       getBookByIsbn: () => () => book,
-  //       isLoggedIn: () => true,
-  //     },
-  //     mocks: { $route, $router },
-  //     store: { actions },
-  //     stubs: { BookDelete, NuxtLink: RouterLinkStub, BookCard: true },
-  //   });
+  it('can delete book', async () => {
+    const { getByRole } = render(DeletePage, {
+      computed: {
+        selectedBook: () => book,
+        getBookByIsbn: () => () => book,
+        isLoggedIn: () => true,
+      },
+      mocks: { $route, $router },
+      store: {
+        actions,
+        state: { books: { selectedBook: book } },
+      },
+      stubs: { BookDelete, NuxtLink: RouterLinkStub, BookCard: true },
+    });
 
-  //   // mounted lifecycle hook sets book to ISBN from URL
-  //   expect(actions.setActiveBook).toHaveBeenCalledWith(
-  //     expect.any(Object), // The Vuex context
-  //     book // The book fetched by getBookByIsbn
-  //   );
+    // mounted lifecycle hook sets book to ISBN from URL
+    expect(actions.setActiveBook).toHaveBeenCalledWith(
+      expect.any(Object), // The Vuex context
+      book // The book fetched by getBookByIsbn
+    );
 
-  //   // delete action trigger
-  //   await fireEvent.click(getByRole('button'));
-  //   expect(actions.deleteBook).toHaveBeenCalledWith(
-  //     expect.any(Object), // The Vuex context
-  //     book
-  //   );
-  //   expect($router.push).toHaveBeenCalled();
-  // });
+    // delete action trigger
+    await fireEvent.click(getByRole('button'));
+    expect(actions.deleteBook).toHaveBeenCalledWith(
+      expect.any(Object), // The Vuex context
+      book
+    );
+    expect($router.push).toHaveBeenCalled();
+  });
 });
