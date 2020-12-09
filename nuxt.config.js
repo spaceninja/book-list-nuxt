@@ -31,7 +31,16 @@ export default {
   modules: ['@nuxtjs/pwa', '@nuxtjs/firebase'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    extend(config, { isServer }) {
+      if (isServer) {
+        config.externals = {
+          '@firebase/auth': 'commonjs @firebase/auth',
+          '@firebase/database': 'commonjs @firebase/database',
+        };
+      }
+    },
+  },
 
   // Firebase Configuration (https://firebase.nuxtjs.org/guide/)
   firebase: {
