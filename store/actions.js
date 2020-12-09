@@ -15,13 +15,6 @@ export default {
       throw 'nuxtServerInit Example not working - ctx.$fire.auth cannot be accessed.';
     }
 
-    console.log(
-      'NUXT SERVER INIT',
-      !!ctx.res,
-      !!ctx.res.locals,
-      !!ctx.res.locals.user
-    );
-
     // INFO -> Nuxt-fire Objects can be accessed in nuxtServerInit action via this.$fire___, ctx.$fire___ and ctx.app.$fire___'
 
     /** Get the VERIFIED authUser from the server */
