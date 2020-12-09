@@ -35,6 +35,7 @@ export default {
     extend(config, { isServer }) {
       if (isServer) {
         config.externals = {
+          '@firebase/app': 'commonjs @firebase/app',
           '@firebase/auth': 'commonjs @firebase/auth',
           '@firebase/database': 'commonjs @firebase/database',
         };
