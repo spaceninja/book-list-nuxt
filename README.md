@@ -31,6 +31,6 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - [x] Add creation
 - [ ] Add API looking for new books
 - [x] Use Vuex modules
-- [ ] Add tests
+- [x] Add tests
 - [ ] Update Book Card markup
 - [ ] Add styles
