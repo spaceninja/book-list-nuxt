@@ -2,7 +2,6 @@ import '@testing-library/jest-dom';
 import { render, fireEvent } from '@testing-library/vue';
 import DeletePage from '@/pages/delete/_isbn.vue';
 import BookDelete from '@/components/BookDelete.vue';
-import BookCard from '@/components/BookCard.vue';
 import { RouterLinkStub } from '@vue/test-utils';
 
 jest.mock('vuex-map-fields', () => ({
