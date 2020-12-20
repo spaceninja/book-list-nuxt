@@ -34,3 +34,4 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - [x] Add tests
 - [ ] Update Book Card markup
 - [ ] Add styles
+- [x] Load sample books

@@ -15,8 +15,6 @@ export default {
       throw 'nuxtServerInit Example not working - ctx.$fire.auth cannot be accessed.';
     }
 
-    console.log('RES.LOCALS', ctx.res.locals);
-
     // INFO -> Nuxt-fire Objects can be accessed in nuxtServerInit action via this.$fire___, ctx.$fire___ and ctx.app.$fire___'
 
     /** Get the VERIFIED authUser from the server */
@@ -45,14 +43,11 @@ export default {
   },
 
   onAuthStateChanged({ commit }, { authUser, claims }) {
-    console.log('ON AUTH STATE CHANGED', authUser, claims);
-
     if (!authUser) {
       console.log('UNSET AUTH USER');
       commit('UNSET_AUTH_USER');
       return;
     }
-
     console.log('SET AUTH USER', authUser.email);
     commit('SET_AUTH_USER', { authUser });
   },

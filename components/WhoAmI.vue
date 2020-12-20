@@ -1,9 +1,12 @@
 <template>
   <div v-if="isLoggedIn">
-    You are logged in as
-    <Gravatar :email="authUser.email" align="center" />
-    {{ authUser.email }}.
-    <button type="button" @click="signOut">Log Out</button>
+    <p>
+      You are logged in as
+      <Gravatar :email="authUser.email" align="center" />
+      {{ authUser.email }}.
+      <button type="button" @click="signOut">Log Out</button>
+    </p>
+    <Alert>Remember: hard refresh will break your authentication!</Alert>
   </div>
   <div v-else>
     You are logged out.
