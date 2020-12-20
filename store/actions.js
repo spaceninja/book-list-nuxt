@@ -15,32 +15,44 @@ export default {
       throw 'nuxtServerInit Example not working - ctx.$fire.auth cannot be accessed.';
     }
 
+    console.log('RES.LOCALS', ctx.res.locals);
+
     // INFO -> Nuxt-fire Objects can be accessed in nuxtServerInit action via this.$fire___, ctx.$fire___ and ctx.app.$fire___'
 
     /** Get the VERIFIED authUser from the server */
     if (ctx.res && ctx.res.locals && ctx.res.locals.user) {
-      const { allClaims: claims, ...authUser } = ctx.res.locals.user;
+      const {
+        allClaims: claims,
+        idToken: token,
+        ...authUser
+      } = ctx.res.locals.user;
 
       console.log(
         'Auth User verified on server-side. User: ',
         authUser,
         'Claims:',
-        claims
+        claims,
+        'Token:',
+        token
       );
 
       await dispatch('onAuthStateChanged', {
         authUser,
         claims,
+        token,
       });
     }
   },
 
-  onAuthStateChanged({ commit }, { authUser }) {
+  onAuthStateChanged({ commit }, { authUser, claims }) {
+    console.log('ON AUTH STATE CHANGED', authUser, claims);
+
     if (!authUser) {
       console.log('UNSET AUTH USER');
       commit('UNSET_AUTH_USER');
       return;
     }
+
     console.log('SET AUTH USER', authUser.email);
     commit('SET_AUTH_USER', { authUser });
   },

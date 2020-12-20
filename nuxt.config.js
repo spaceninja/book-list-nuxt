@@ -71,8 +71,7 @@ export default {
       // By default the workbox module will not install the service worker in
       // dev environment to avoid conflicts with HMR. Only set this true for
       // testing and remember to always clear your browser cache in development
-      // dev: process.env.NODE_ENV === 'development',
-      dev: false,
+      dev: process.env.NODE_ENV === 'development',
     },
   },
 };
