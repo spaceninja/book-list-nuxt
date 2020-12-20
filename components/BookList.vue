@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ol v-if="allBooks">
+    <ol v-if="Object.keys(allBooks).length">
       <BookCard
         v-for="book in allBooks"
         :key="book.isbn"
@@ -12,16 +12,16 @@
       There are no books in the list yet. Why don’t you add one?
     </Alert>
     <NuxtLink v-if="isLoggedIn" to="/add">Add Book</NuxtLink>
+    <NuxtLink v-if="isLoggedIn" to="/reset">Reset Books</NuxtLink>
   </div>
 </template>
 
 <script>
-import { createNamespacedHelpers, mapGetters } from 'vuex';
-const { mapState: mapBookState } = createNamespacedHelpers('books');
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   computed: {
-    ...mapBookState(['allBooks']),
+    ...mapState({ allBooks: (state) => state.books.allBooks }),
     ...mapGetters(['isLoggedIn']),
   },
 };

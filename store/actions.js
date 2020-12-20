@@ -17,6 +17,13 @@ export default {
 
     // INFO -> Nuxt-fire Objects can be accessed in nuxtServerInit action via this.$fire___, ctx.$fire___ and ctx.app.$fire___'
 
+    console.log(
+      'GET VERIFIED AUTHUSER FROM SERVER',
+      !!ctx.res,
+      !!ctx.res.locals,
+      !!ctx.res.locals.user
+    );
+
     /** Get the VERIFIED authUser from the server */
     if (ctx.res && ctx.res.locals && ctx.res.locals.user) {
       const { allClaims: claims, ...authUser } = ctx.res.locals.user;
@@ -79,7 +86,7 @@ export default {
   },
 
   async deleteBook({ commit, state }) {
-    const book = state.book;
+    const book = state.books.selectedBook;
     try {
       await this.$fire.database.ref(`books/${book.isbn}`).remove();
       console.log('DELETED BOOK', book && book.title);
@@ -89,10 +96,19 @@ export default {
   },
 
   async saveBook({ commit, state }) {
-    const book = state.book;
+    const book = state.books.selectedBook;
     try {
       await this.$fire.database.ref(`books/${book.isbn}`).set(book);
       console.log('SAVED BOOK', book && book.title);
+    } catch (e) {
+      console.error(e);
+    }
+  },
+
+  async saveBooks({ commit, state }, books) {
+    try {
+      await this.$fire.database.ref('books').set(books);
+      console.log('SAVED BOOKS', books);
     } catch (e) {
       console.error(e);
     }
