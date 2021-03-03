@@ -12,6 +12,7 @@ describe('WhoAmI.vue', () => {
   it('dispatches signIn action when logged out', async () => {
     const { getByText, getByRole } = render(WhoAmI, {
       computed: { isLoggedIn: () => false },
+      stubs: ['Alert'],
       store: { actions },
     });
     getByText(/You are logged out/);
@@ -25,7 +26,7 @@ describe('WhoAmI.vue', () => {
         isLoggedIn: () => true,
         authUser: () => authUser,
       },
-      stubs: ['Gravatar'],
+      stubs: ['Alert', 'Gravatar'],
       store: { actions },
     });
     getByText(/You are logged in/);
