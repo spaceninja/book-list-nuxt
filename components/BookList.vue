@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ol v-if="Object.keys(allBooks).length">
+    <ol v-if="allBooks && Object.keys(allBooks).length">
       <BookCard
         v-for="book in allBooks"
         :key="book.isbn"
