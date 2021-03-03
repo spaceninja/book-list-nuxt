@@ -1,15 +1,21 @@
 export default {
   async nuxtServerInit({ dispatch }, ctx) {
     if (this.$fire.auth === null) {
-      throw 'nuxtServerInit Example not working - this.$fire.auth cannot be accessed.';
+      throw new Error(
+        'nuxtServerInit Example not working - this.$fire.auth cannot be accessed.'
+      );
     }
 
     if (ctx.$fire.auth === null) {
-      throw 'nuxtServerInit Example not working - ctx.$fire.auth cannot be accessed.';
+      throw new Error(
+        'nuxtServerInit Example not working - ctx.$fire.auth cannot be accessed.'
+      );
     }
 
     if (ctx.app.$fire.auth === null) {
-      throw 'nuxtServerInit Example not working - ctx.$fire.auth cannot be accessed.';
+      throw new Error(
+        'nuxtServerInit Example not working - ctx.$fire.auth cannot be accessed.'
+      );
     }
 
     // INFO -> Nuxt-fire Objects can be accessed in nuxtServerInit action via this.$fire___, ctx.$fire___ and ctx.app.$fire___'
