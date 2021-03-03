@@ -14,14 +14,15 @@ import { mapState, mapGetters, mapActions } from 'vuex';
 export default {
   computed: {
     ...mapState({ selectedBook: (state) => state.books.selectedBook }),
-    ...mapGetters(['getBookByIsbn', 'isLoggedIn']),
+    ...mapGetters(['isLoggedIn']),
+    ...mapGetters('books', ['getBookByIsbn']),
   },
   mounted() {
     // When the page mounts, set the active book to the current ISBN
     this.setActiveBook(this.getBookByIsbn(this.$route.params.isbn));
   },
   methods: {
-    ...mapActions(['deleteBook', 'setActiveBook']),
+    ...mapActions('books', ['deleteBook', 'setActiveBook']),
     async handleDelete() {
       await this.deleteBook(this.selectedBook);
       this.$router.push('/');

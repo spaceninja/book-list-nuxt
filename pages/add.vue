@@ -17,7 +17,7 @@ export default {
     this.setActiveBook({});
   },
   methods: {
-    ...mapActions(['saveBook', 'setActiveBook']),
+    ...mapActions('books', ['saveBook', 'setActiveBook']),
     async handleSave() {
       await this.saveBook(this.selectedBook);
       this.$router.push('/');

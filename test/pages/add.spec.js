@@ -18,6 +18,15 @@ const actions = {
   setActiveBook: jest.fn(),
 };
 
+const store = {
+  modules: {
+    books: {
+      namespaced: true,
+      actions,
+    },
+  },
+};
+
 const stubs = {
   BookEdit: {
     template: '<div data-testid="book-edit" />',
@@ -37,7 +46,7 @@ describe('pages/add.vue', () => {
   it('shows add form if logged in', () => {
     const { getByTestId } = render(AddPage, {
       computed: { isLoggedIn: () => true },
-      store: { actions },
+      store,
       stubs,
     });
     getByTestId('book-edit');
@@ -46,7 +55,7 @@ describe('pages/add.vue', () => {
   it('hides add form if logged out', () => {
     const { queryByTestId } = render(AddPage, {
       computed: { isLoggedIn: () => false },
-      store: { actions },
+      store,
       stubs,
     });
     expect(queryByTestId('book-edit')).not.toBeInTheDocument();
@@ -59,7 +68,7 @@ describe('pages/add.vue', () => {
         isLoggedIn: () => true,
       },
       mocks: { $router },
-      store: { actions },
+      store,
       stubs: { BookEdit, FormInput },
     });
 

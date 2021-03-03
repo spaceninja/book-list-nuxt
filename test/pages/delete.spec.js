@@ -24,6 +24,15 @@ const actions = {
   setActiveBook: jest.fn(),
 };
 
+const store = {
+  modules: {
+    books: {
+      namespaced: true,
+      actions,
+    },
+  },
+};
+
 const stubs = {
   BookDelete: {
     template: '<div data-testid="book-delete" />',
@@ -51,7 +60,7 @@ describe('pages/delete/_isbn.vue', () => {
         isLoggedIn: () => true,
       },
       mocks: { $route },
-      store: { actions },
+      store,
       stubs,
     });
     getByTestId('book-delete');
@@ -64,7 +73,7 @@ describe('pages/delete/_isbn.vue', () => {
         isLoggedIn: () => false,
       },
       mocks: { $route },
-      store: { actions },
+      store,
       stubs,
     });
     expect(queryByTestId('book-delete')).not.toBeInTheDocument();
@@ -78,7 +87,7 @@ describe('pages/delete/_isbn.vue', () => {
         isLoggedIn: () => true,
       },
       mocks: { $route },
-      store: { actions },
+      store,
       stubs,
     });
     getByTestId('alert');
@@ -93,8 +102,13 @@ describe('pages/delete/_isbn.vue', () => {
       },
       mocks: { $route, $router },
       store: {
-        actions,
-        state: { books: { selectedBook: book } },
+        modules: {
+          books: {
+            namespaced: true,
+            actions,
+            state: { books: { selectedBook: book } },
+          },
+        },
       },
       stubs: { BookDelete, NuxtLink: RouterLinkStub, BookCard: true },
     });

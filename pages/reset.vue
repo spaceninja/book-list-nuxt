@@ -13,7 +13,7 @@ import sampleBooks from '../example/sample-books';
 
 export default {
   methods: {
-    ...mapActions(['saveBooks']),
+    ...mapActions('books', ['saveBooks']),
     async loadSampleBooks() {
       await this.saveBooks(sampleBooks);
       this.$router.push('/');

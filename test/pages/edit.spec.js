@@ -24,6 +24,15 @@ const actions = {
   setActiveBook: jest.fn(),
 };
 
+const store = {
+  modules: {
+    books: {
+      namespaced: true,
+      actions,
+    },
+  },
+};
+
 const stubs = {
   BookEdit: {
     template: '<div data-testid="book-edit" />',
@@ -51,7 +60,7 @@ describe('pages/edit/_isbn.vue', () => {
         isLoggedIn: () => true,
       },
       mocks: { $route },
-      store: { actions },
+      store,
       stubs,
     });
     getByTestId('book-edit');
@@ -64,7 +73,7 @@ describe('pages/edit/_isbn.vue', () => {
         isLoggedIn: () => false,
       },
       mocks: { $route },
-      store: { actions },
+      store,
       stubs,
     });
     expect(queryByTestId('book-edit')).not.toBeInTheDocument();
@@ -78,7 +87,7 @@ describe('pages/edit/_isbn.vue', () => {
         isLoggedIn: () => true,
       },
       mocks: { $route },
-      store: { actions },
+      store,
       stubs,
     });
     getByTestId('alert');
@@ -92,7 +101,7 @@ describe('pages/edit/_isbn.vue', () => {
         isLoggedIn: () => true,
       },
       mocks: { $route, $router },
-      store: { actions },
+      store,
       stubs: { BookEdit, FormInput },
     });
 

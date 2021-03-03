@@ -24,9 +24,9 @@ export default {
     console.log('SSR', process.server);
     try {
       // Bind Vuexfire on server side, then unbind to avoid server memory leaks.
-      await this.$store.dispatch('bindBooks');
+      await this.$store.dispatch('books/bind');
       console.log('BIND BOOKS COMPLETE', process.server ? 'SERVER' : 'CLIENT');
-      this.$store.dispatch('unbindBooks');
+      this.$store.dispatch('books/unbind');
     } catch (e) {
       console.error(e);
     }
@@ -37,7 +37,7 @@ export default {
     console.log('CLIENT', process.client);
     try {
       // Bind Vuexfire on client side
-      await this.$store.dispatch('bindBooks');
+      await this.$store.dispatch('books/bind');
       console.log('BIND BOOKS COMPLETE', process.server ? 'SERVER' : 'CLIENT');
     } catch (e) {
       console.error(e);
