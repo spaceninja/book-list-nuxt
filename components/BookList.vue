@@ -21,18 +21,17 @@ import { mapState, mapGetters } from 'vuex';
 
 export default {
   computed: {
-    ...mapState({ allBooks: (state) => state.books.allBooks }),
+    ...mapState({
+      allBooks: (state) => state.books.allBooks,
+      sortBy: (state) => state.books.sortBy,
+      filterBy: (state) => state.books.filterBy,
+    }),
     ...mapGetters({
       isLoggedIn: 'isLoggedIn',
       getSortedAndFilteredBooks: 'books/getSortedAndFilteredBooks',
     }),
     sortedAndFilteredBooks() {
-      return this.getSortedAndFilteredBooks(['purchased', 'prioritize'], {
-        firstBy: 'title',
-        firstByOrder: 'ascending',
-        thenBy: 'authorLast',
-        thenByOrder: 'ascending',
-      });
+      return this.getSortedAndFilteredBooks(this.filterBy, this.sortBy);
     },
     hasBooks() {
       return Object.keys(this.sortedAndFilteredBooks).length;

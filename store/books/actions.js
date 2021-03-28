@@ -12,6 +12,16 @@ export default {
     commit('UNSET_ACTIVE_BOOK');
   },
 
+  addFilter({ commit }, filter) {
+    console.log('ADD FILTER', filter);
+    commit('ADD_FILTER', filter);
+  },
+
+  removeFilter({ commit }, filter) {
+    console.log('REMOVE FILTER', filter);
+    commit('REMOVE_FILTER', filter);
+  },
+
   async deleteBook({ commit, state }) {
     const book = state.selectedBook;
     try {

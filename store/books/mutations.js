@@ -23,4 +23,12 @@ export default {
   UNSET_ACTIVE_BOOK: (state) => {
     state.selectedBook = {};
   },
+
+  ADD_FILTER: (state, filter) => {
+    state.filterBy.push(filter);
+  },
+
+  REMOVE_FILTER: (state, filter) => {
+    state.filterBy = state.filterBy.filter((item) => item !== filter);
+  },
 };

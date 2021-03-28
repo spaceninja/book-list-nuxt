@@ -1,18 +1,12 @@
 <template>
   <div>
-    <header>
-      <h1>
-        <NuxtLink to="/">Reading List</NuxtLink>
-      </h1>
-    </header>
+    <AppHeader />
     <hr />
     <main>
       <Nuxt />
     </main>
     <hr />
-    <footer>
-      <WhoAmI />
-    </footer>
+    <AppFooter />
   </div>
 </template>
 
