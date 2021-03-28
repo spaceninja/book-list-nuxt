@@ -1,8 +1,8 @@
 <template>
   <div>
-    <ol v-if="allBooks && Object.keys(allBooks).length">
+    <ol v-if="sortedAndFilteredBooks && hasBooks">
       <BookCard
-        v-for="book in allBooks"
+        v-for="book in sortedAndFilteredBooks"
         :key="book.isbn"
         v-bind="book"
         :is-editable="true"
@@ -22,7 +22,21 @@ import { mapState, mapGetters } from 'vuex';
 export default {
   computed: {
     ...mapState({ allBooks: (state) => state.books.allBooks }),
-    ...mapGetters(['isLoggedIn']),
+    ...mapGetters({
+      isLoggedIn: 'isLoggedIn',
+      getSortedAndFilteredBooks: 'books/getSortedAndFilteredBooks',
+    }),
+    sortedAndFilteredBooks() {
+      return this.getSortedAndFilteredBooks(['purchased', 'prioritize'], {
+        firstBy: 'title',
+        firstByOrder: 'ascending',
+        thenBy: 'authorLast',
+        thenByOrder: 'ascending',
+      });
+    },
+    hasBooks() {
+      return Object.keys(this.sortedAndFilteredBooks).length;
+    },
   },
 };
 </script>

@@ -1,5 +1,6 @@
 <template>
   <li>
+    <span v-if="purchased">$</span> <span v-if="prioritize">!</span>
     <i>{{ title }}</i> by {{ authorFirst }} {{ authorLast }}, {{ length }}pp,
     {{ rating }}
     <span v-if="isLoggedIn && isEditable">

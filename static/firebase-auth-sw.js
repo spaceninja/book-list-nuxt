@@ -1,10 +1,10 @@
 const ignorePaths = ["\u002F__webpack_hmr","\u002F_loading","\u002F_nuxt\u002F"]
 
 importScripts(
-  'https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js'
+  'https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js'
 )
 importScripts(
-  'https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js'
+  'https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js'
 )
 firebase.initializeApp({"apiKey":"AIzaSyA-5tojAEBlkSLR-xwNFALegJw_A5Ch-WY","authDomain":"spaceninja-book-list-dev.firebaseapp.com","databaseURL":"https:\u002F\u002Fspaceninja-book-list-dev.firebaseio.com","projectId":"spaceninja-book-list-dev"})
 
