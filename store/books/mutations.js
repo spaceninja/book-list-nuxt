@@ -31,4 +31,8 @@ export default {
   REMOVE_FILTER: (state, filter) => {
     state.filterBy = state.filterBy.filter((item) => item !== filter);
   },
+
+  SET_SORT: (state, sort) => {
+    state.sortBy = { ...sort };
+  },
 };

@@ -24,8 +24,8 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - [x] Clean up Login
 - [x] Handle Logged-Out
 - [x] Handle empty book list
-- [ ] Add sorting
-- [ ] Add filtering
+- [x] Add sorting
+- [x] Add filtering
 - [x] Add editing
 - [x] Add deleting
 - [x] Add creation

@@ -22,6 +22,11 @@ export default {
     commit('REMOVE_FILTER', filter);
   },
 
+  setSort({ commit }, sort) {
+    console.log('SET SORT', sort);
+    commit('SET_SORT', sort);
+  },
+
   async deleteBook({ commit, state }) {
     const book = state.selectedBook;
     try {

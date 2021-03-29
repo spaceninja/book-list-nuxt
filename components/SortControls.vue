@@ -26,9 +26,15 @@
     <fieldset>
       <legend>Sort by:</legend>
       <label for="sort">
-        <select id="sort" name="sort">
-          <option value="title">Title</option>
-          <option value="author">Author</option>
+        <select id="sort" v-model="sortMethod" name="sort">
+          <option
+            v-for="option in sortOptions"
+            :key="option.firstBy"
+            :value="option.firstBy"
+            :selected="option.firstBy === sortMethod"
+          >
+            {{ option.display }}
+          </option>
         </select>
       </label>
     </fieldset>
@@ -39,9 +45,51 @@
 import { mapState, mapActions } from 'vuex';
 
 export default {
+  data() {
+    return {
+      sortOptions: {
+        title: {
+          display: 'Title',
+          firstBy: 'title',
+          firstByOrder: 'ascending',
+          thenBy: 'authorLast',
+          thenByOrder: 'ascending',
+        },
+        series: {
+          display: 'Series',
+          firstBy: 'series',
+          firstByOrder: 'ascending',
+          thenBy: 'title',
+          thenByOrder: 'ascending',
+        },
+        authorLast: {
+          display: 'Author',
+          firstBy: 'authorLast',
+          firstByOrder: 'ascending',
+          thenBy: 'series',
+          thenByOrder: 'ascending',
+        },
+        rating: {
+          display: 'Rating',
+          firstBy: 'rating',
+          firstByOrder: 'descending',
+          thenBy: 'length',
+          thenByOrder: 'ascending',
+        },
+        length: {
+          display: 'Length',
+          firstBy: 'length',
+          firstByOrder: 'ascending',
+          thenBy: 'rating',
+          thenByOrder: 'descending',
+        },
+      },
+    };
+  },
   computed: {
     ...mapState({
       filterBy: (state) => state.books.filterBy,
+      sortBy: (state) => state.books.sortBy,
     }),
     prioritize() {
       return this.filterBy.includes('prioritize');
@@ -49,9 +97,17 @@ export default {
     purchased() {
       return this.filterBy.includes('purchased');
     },
+    sortMethod: {
+      get() {
+        return this.sortBy.firstBy;
+      },
+      set() {
+        this.setSort(this.sortOptions[event.target.value]);
+      },
+    },
   },
   methods: {
-    ...mapActions('books', ['addFilter', 'removeFilter']),
+    ...mapActions('books', ['addFilter', 'removeFilter', 'setSort']),
     toggleFilter(event) {
       event.target.checked
         ? this.addFilter(event.target.name)
