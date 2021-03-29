@@ -23,21 +23,19 @@
         <label for="prioritize">Prioritize</label>
       </div>
     </fieldset>
-    <fieldset>
-      <legend>Sort by:</legend>
-      <label for="sort">
-        <select id="sort" v-model="sortMethod" name="sort">
-          <option
-            v-for="option in sortOptions"
-            :key="option.firstBy"
-            :value="option.firstBy"
-            :selected="option.firstBy === sortMethod"
-          >
-            {{ option.display }}
-          </option>
-        </select>
-      </label>
-    </fieldset>
+    <div>
+      <label for="sort">Sort by:</label>
+      <select id="sort" name="sort" @change="setSortMethod">
+        <option
+          v-for="option in sortOptions"
+          :key="option.firstBy"
+          :value="option.firstBy"
+          :selected="option.firstBy === sortMethod"
+        >
+          {{ option.display }}
+        </option>
+      </select>
+    </div>
   </form>
 </template>
 
@@ -97,13 +95,8 @@ export default {
     purchased() {
       return this.filterBy.includes('purchased');
     },
-    sortMethod: {
-      get() {
-        return this.sortBy.firstBy;
-      },
-      set() {
-        this.setSort(this.sortOptions[event.target.value]);
-      },
+    sortMethod() {
+      return this.sortBy.firstBy;
     },
   },
   methods: {
@@ -112,6 +105,9 @@ export default {
       event.target.checked
         ? this.addFilter(event.target.name)
         : this.removeFilter(event.target.name);
+    },
+    setSortMethod(event) {
+      this.setSort(this.sortOptions[event.target.value]);
     },
   },
 };
