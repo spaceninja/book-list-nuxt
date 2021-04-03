@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ol v-if="sortedAndFilteredBooks && hasBooks">
+    <ol v-if="sortedAndFilteredBooks && hasBooks" class="book-list">
       <BookCard
         v-for="book in sortedAndFilteredBooks"
         :key="book.isbn"
@@ -39,3 +39,22 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.book-list {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+
+  @media screen and (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  }
+}
+</style>
