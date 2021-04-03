@@ -50,6 +50,9 @@ export default {
       authDomain: 'spaceninja-book-list-dev.firebaseapp.com',
       databaseURL: 'https://spaceninja-book-list-dev.firebaseio.com',
       projectId: 'spaceninja-book-list-dev',
+      storageBucket: 'spaceninja-book-list-dev.appspot.com',
+      messagingSenderId: '340949330740',
+      appId: '1:340949330740:web:9c8bb2f8fe83b8242e1361',
     },
     services: {
       auth: {

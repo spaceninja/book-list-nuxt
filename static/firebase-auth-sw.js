@@ -6,7 +6,7 @@ importScripts(
 importScripts(
   'https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js'
 )
-firebase.initializeApp({"apiKey":"AIzaSyA-5tojAEBlkSLR-xwNFALegJw_A5Ch-WY","authDomain":"spaceninja-book-list-dev.firebaseapp.com","databaseURL":"https:\u002F\u002Fspaceninja-book-list-dev.firebaseio.com","projectId":"spaceninja-book-list-dev"})
+firebase.initializeApp({"apiKey":"AIzaSyA-5tojAEBlkSLR-xwNFALegJw_A5Ch-WY","authDomain":"spaceninja-book-list-dev.firebaseapp.com","databaseURL":"https:\u002F\u002Fspaceninja-book-list-dev.firebaseio.com","projectId":"spaceninja-book-list-dev","storageBucket":"spaceninja-book-list-dev.appspot.com","messagingSenderId":"340949330740","appId":"1:340949330740:web:9c8bb2f8fe83b8242e1361"})
 
 // Initialize authService
 const authService = firebase.auth()
