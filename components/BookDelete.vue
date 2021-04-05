@@ -3,8 +3,8 @@
     <h2>Delete Book</h2>
     <p>Are you sure you want to delete this book?</p>
     <BookCard v-bind="selectedBook" />
-    <button type="button" @click="confirmDelete">Yes</button>
-    <NuxtLink to="/">No</NuxtLink>
+    <AppButton @click="confirmDelete">Yes</AppButton>
+    <AppButton to="/">No</AppButton>
   </div>
 </template>
 

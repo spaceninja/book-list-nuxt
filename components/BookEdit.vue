@@ -81,10 +81,10 @@
       <FormInput v-model="prioritize" label="Prioritize" type="checkbox" />
 
       <div class="form__group form__group--actions form__group--doublewide">
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="button" class="btn btn-secondary" @click="getCover">
+        <AppButton type="submit" class="button--primary">Submit</AppButton>
+        <AppButton class="button--secondary" @click="getCover">
           Get Cover
-        </button>
+        </AppButton>
       </div>
     </form>
     <img :src="thumbnail" alt="" />
@@ -129,6 +129,7 @@ export default {
       }
     },
     getCover() {
+      console.log('CLICK!');
       fetch(
         'https://www.googleapis.com/books/v1/volumes?q=isbn:' +
           this.isbn +

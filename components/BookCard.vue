@@ -34,14 +34,20 @@
       </p>
     </div>
     <div v-if="isLoggedIn && isEditable" class="book__actions">
-      <NuxtLink :to="`/edit/${isbn}`" class="btn btn-icon-only btn-primary">
-        <span aria-hidden="true" class="btn__icon">✏️</span>
+      <AppButton
+        :to="`/edit/${isbn}`"
+        class="button--icon-only button--primary"
+      >
+        <span aria-hidden="true" class="button__icon">✏️</span>
         <span class="sr-only">Edit</span>
-      </NuxtLink>
-      <NuxtLink :to="`/delete/${isbn}`" class="btn btn-icon-only btn-secondary">
-        <span aria-hidden="true" class="btn__icon">❌</span>
+      </AppButton>
+      <AppButton
+        :to="`/delete/${isbn}`"
+        class="button--icon-only button--secondary"
+      >
+        <span aria-hidden="true" class="button__icon">❌</span>
         <span class="sr-only">Delete</span>
-      </NuxtLink>
+      </AppButton>
     </div>
   </li>
 </template>
@@ -282,7 +288,7 @@ $color_shadow2: rgba(0, 0, 0, 0.24);
   flex-direction: column;
   padding-top: 5rem;
 
-  .btn + .btn {
+  .button + .button {
     margin-left: 0;
     margin-top: 0.5em;
   }

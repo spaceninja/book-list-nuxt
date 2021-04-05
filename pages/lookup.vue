@@ -2,7 +2,7 @@
   <div v-if="isLoggedIn">
     <div v-if="selectedBook && selectedBook.isbn">
       <BookEdit @save="handleSave" />
-      <button @click="handleReset">Back to Search Results</button>
+      <AppButton @click="handleReset">Back to Search Results</AppButton>
     </div>
     <BookLookup v-else @load="handleLoad" />
   </div>

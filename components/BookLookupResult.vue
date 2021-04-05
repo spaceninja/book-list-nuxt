@@ -2,7 +2,7 @@
   <li>
     <img :src="thumbnail" alt="" height="32" />
     {{ title }} by {{ author }}: {{ pageCount }}pp, {{ averageRating }}
-    <button @click="$emit('load', book)">Add this Book</button>
+    <AppButton @click="$emit('load', book)">Add this Book</AppButton>
   </li>
 </template>
 

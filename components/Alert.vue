@@ -16,12 +16,20 @@ export default {
 </script>
 
 <style lang="scss">
+$color_warning: #ffc;
+$color_danger: #fcc;
+
 .alert {
   border: 1px solid currentColor;
-  padding: 0.5rem;
+  margin: 1em 0;
+  padding: 0.25em 1em 0.5em;
+}
+
+.alert--warning {
+  background: $color_warning;
 }
 
 .alert--error {
-  color: red;
+  background: $color_danger;
 }
 </style>

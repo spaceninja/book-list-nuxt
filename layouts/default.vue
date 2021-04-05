@@ -1,11 +1,9 @@
 <template>
   <div>
     <AppHeader />
-    <hr />
     <main>
       <Nuxt />
     </main>
-    <hr />
     <AppFooter />
   </div>
 </template>

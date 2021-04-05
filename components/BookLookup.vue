@@ -11,7 +11,7 @@
       <FormInput v-model="isbn" label="ISBN" />
 
       <div class="form__group form__group--actions form__group--doublewide">
-        <button type="submit" class="btn btn-primary">Search</button>
+        <AppButton type="submit" class="button--primary">Search</AppButton>
       </div>
     </form>
     <ol v-if="searchResults.length">

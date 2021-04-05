@@ -1,8 +1,8 @@
 <template>
   <div>
-    <button type="button" @click="loadSampleBooks">Load Sample Books</button>
-    <button type="button" @click="loadInitBooks">Load Init Books</button>
-    <button type="button" @click="emptyBookList">Empty Book List</button>
+    <AppButton @click="loadSampleBooks">Load Sample Books</AppButton>
+    <AppButton @click="loadInitBooks">Load Init Books</AppButton>
+    <AppButton @click="emptyBookList">Empty Book List</AppButton>
   </div>
 </template>
 

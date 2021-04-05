@@ -4,13 +4,13 @@
       You are logged in as
       <Gravatar :email="authUser.email" align="center" />
       {{ authUser.email }}.
-      <button type="button" @click="signOut">Log Out</button>
+      <AppButton @click="signOut">Log Out</AppButton>
     </p>
     <Alert>Remember: hard refresh will break your authentication!</Alert>
   </div>
   <div v-else>
     You are logged out.
-    <button type="button" @click="signInWithGitHub">Sign in with GitHub</button>
+    <AppButton @click="signInWithGitHub">Sign in with GitHub</AppButton>
   </div>
 </template>
 
