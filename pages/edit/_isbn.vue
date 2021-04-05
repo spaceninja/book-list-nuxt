@@ -21,7 +21,9 @@ export default {
   methods: {
     ...mapActions('books', ['saveBook', 'setActiveBook']),
     async handleSave() {
+      console.log('SAVE');
       await this.saveBook(this.selectedBook);
+      console.log('ROUTER');
       this.$router.push('/');
     },
   },

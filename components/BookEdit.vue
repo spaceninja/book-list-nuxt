@@ -115,14 +115,16 @@ export default {
   },
   methods: {
     saveBook() {
+      console.log('SAVE!');
       if (
         this.isbn &&
         this.title &&
         this.authorFirst &&
         this.authorLast &&
-        this.rating &&
-        this.length
+        this.rating >= 0 &&
+        this.length >= 0
       ) {
+        console.log('GOOD BOOK');
         this.$emit('save');
       }
     },
