@@ -82,8 +82,12 @@
 
       <div class="form__group form__group--actions form__group--doublewide">
         <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" @click="getCover">
+          Get Cover
+        </button>
       </div>
     </form>
+    <img :src="thumbnail" alt="" />
   </div>
 </template>
 
@@ -121,6 +125,35 @@ export default {
       ) {
         this.$emit('save');
       }
+    },
+    getCover() {
+      fetch(
+        'https://www.googleapis.com/books/v1/volumes?q=isbn:' +
+          this.isbn +
+          '&fields=items(volumeInfo(imageLinks))' +
+          '&key=' +
+          process.env.NUXT_ENV_FIRE_APIKEY,
+        { method: 'get' }
+      )
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          if (data.error) {
+            throw new Error(data.error.message);
+          }
+          console.log(data);
+          // const book = this.state.book;
+          let img = data.items[0].volumeInfo.imageLinks.thumbnail;
+          img = img.replace(/^http:\/\//i, 'https://');
+          // book.thumbnail = img;
+          // this.setState({ book });
+          this.thumbnail = img;
+          console.log('IMG', img);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     },
   },
 };

@@ -12,6 +12,7 @@
       There are no books in the list yet. Why don’t you add one?
     </Alert>
     <NuxtLink v-if="isLoggedIn" to="/add">Add Book</NuxtLink>
+    <NuxtLink v-if="isLoggedIn" to="/lookup">Look Up a Book</NuxtLink>
     <NuxtLink v-if="isLoggedIn" to="/reset">Reset Books</NuxtLink>
   </div>
 </template>

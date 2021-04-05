@@ -46,13 +46,13 @@ export default {
   // Firebase Configuration (https://firebase.nuxtjs.org/guide/)
   firebase: {
     config: {
-      apiKey: 'AIzaSyA-5tojAEBlkSLR-xwNFALegJw_A5Ch-WY',
-      authDomain: 'spaceninja-book-list-dev.firebaseapp.com',
-      databaseURL: 'https://spaceninja-book-list-dev.firebaseio.com',
-      projectId: 'spaceninja-book-list-dev',
-      storageBucket: 'spaceninja-book-list-dev.appspot.com',
-      messagingSenderId: '340949330740',
-      appId: '1:340949330740:web:9c8bb2f8fe83b8242e1361',
+      apiKey: process.env.NUXT_ENV_FIRE_APIKEY,
+      authDomain: process.env.NUXT_ENV_FIRE_AUTHDOMAIN,
+      databaseURL: process.env.NUXT_ENV_FIRE_DATABASEURL,
+      projectId: process.env.NUXT_ENV_FIRE_PROJECTID,
+      storageBucket: process.env.NUXT_ENV_FIRE_STORAGEBUCKET,
+      messagingSenderId: process.env.NUXT_ENV_FIRE_MESSAGINGSENDERID,
+      appId: process.env.NUXT_ENV_FIRE_APPID,
     },
     services: {
       auth: {

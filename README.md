@@ -29,9 +29,12 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - [x] Add editing
 - [x] Add deleting
 - [x] Add creation
-- [ ] Add API looking for new books
+- [x] Add API looking for new books
+- [x] Add API for thumbnails
+- [x] Move Firebase config to .env files
 - [x] Use Vuex modules
 - [x] Add tests
 - [ ] Update Book Card markup
 - [ ] Add styles
+- [ ] Add tests
 - [x] Load sample books
