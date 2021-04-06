@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, fireEvent } from '@testing-library/vue';
 import EditPage from '@/pages/edit/_isbn.vue';
+import AppButton from '@/components/AppButton.vue';
 import BookEdit from '@/components/BookEdit.vue';
 import FormInput from '@/components/FormInput.vue';
 
@@ -102,7 +103,7 @@ describe('pages/edit/_isbn.vue', () => {
       },
       mocks: { $route, $router },
       store,
-      stubs: { BookEdit, FormInput },
+      stubs: { AppButton, BookEdit, FormInput },
     });
 
     // mounted lifecycle hook sets book to ISBN from URL
@@ -129,7 +130,7 @@ describe('pages/edit/_isbn.vue', () => {
     ]);
 
     // save action trigger
-    await fireEvent.click(getByRole('button'));
+    await fireEvent.click(getByRole('button', { name: /submit/i }));
     expect(actions.saveBook).toHaveBeenCalledWith(
       expect.any(Object), // The Vuex context
       book

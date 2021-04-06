@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, fireEvent } from '@testing-library/vue';
 import DeletePage from '@/pages/delete/_isbn.vue';
+import AppButton from '@/components/AppButton.vue';
 import BookDelete from '@/components/BookDelete.vue';
 import { RouterLinkStub } from '@vue/test-utils';
 
@@ -110,7 +111,12 @@ describe('pages/delete/_isbn.vue', () => {
           },
         },
       },
-      stubs: { BookDelete, NuxtLink: RouterLinkStub, BookCard: true },
+      stubs: {
+        AppButton,
+        BookDelete,
+        NuxtLink: RouterLinkStub,
+        BookCard: true,
+      },
     });
 
     // mounted lifecycle hook sets book to ISBN from URL

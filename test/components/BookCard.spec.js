@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/vue';
+import AppButton from '@/components/AppButton.vue';
 import BookCard from '@/components/BookCard.vue';
 import { RouterLinkStub } from '@vue/test-utils';
 
@@ -26,7 +27,7 @@ describe('BookCard.vue', () => {
       props: book,
       computed: { isLoggedIn: () => false },
     });
-    expect(queryByText('edit')).not.toBeInTheDocument();
+    expect(queryByText('✏️')).not.toBeInTheDocument();
   });
 
   it('hides controls if logged in but not editable', () => {
@@ -34,15 +35,15 @@ describe('BookCard.vue', () => {
       props: book,
       computed: { isLoggedIn: () => true },
     });
-    expect(queryByText('edit')).not.toBeInTheDocument();
+    expect(queryByText('✏️')).not.toBeInTheDocument();
   });
 
   it('shows controls if logged in and editable', () => {
     const { getByText } = render(BookCard, {
       props: { ...book, isEditable: true },
       computed: { isLoggedIn: () => true },
-      stubs: { NuxtLink: RouterLinkStub },
+      stubs: { AppButton, NuxtLink: RouterLinkStub },
     });
-    getByText('edit');
+    getByText('✏️');
   });
 });

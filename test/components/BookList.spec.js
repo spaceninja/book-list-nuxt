@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/vue';
+import AppButton from '@/components/AppButton.vue';
 import BookList from '@/components/BookList.vue';
 import { RouterLinkStub } from '@vue/test-utils';
 
@@ -33,6 +34,7 @@ describe('BookList.vue', () => {
         filterBy: () => '',
       },
       stubs: {
+        AppButton: true,
         BookCard: {
           template: '<div data-testid="book-card" />',
         },
@@ -53,7 +55,7 @@ describe('BookList.vue', () => {
         sortBy: () => '',
         filterBy: () => '',
       },
-      stubs: ['Alert'],
+      stubs: ['Alert', 'AppButton'],
     });
     getByText(/There are no books/);
   });
@@ -67,7 +69,7 @@ describe('BookList.vue', () => {
         sortBy: () => '',
         filterBy: () => '',
       },
-      stubs: { Alert: true, NuxtLink: RouterLinkStub },
+      stubs: { Alert: true, AppButton: true, NuxtLink: RouterLinkStub },
     });
     getByText('Add Book');
   });

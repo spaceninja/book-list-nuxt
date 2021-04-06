@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/vue';
+import AppButton from '@/components/AppButton.vue';
 import BookDelete from '@/components/BookDelete.vue';
 import { RouterLinkStub } from '@vue/test-utils';
 
@@ -13,6 +14,7 @@ const book = {
 };
 
 const stubs = {
+  AppButton,
   BookCard: {
     template: '<div data-testid="book-card" />',
   },

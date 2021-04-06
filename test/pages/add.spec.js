@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, fireEvent } from '@testing-library/vue';
 import AddPage from '@/pages/add.vue';
+import AppButton from '@/components/AppButton.vue';
 import BookEdit from '@/components/BookEdit.vue';
 import FormInput from '@/components/FormInput.vue';
 
@@ -69,7 +70,7 @@ describe('pages/add.vue', () => {
       },
       mocks: { $router },
       store,
-      stubs: { BookEdit, FormInput },
+      stubs: { AppButton, BookEdit, FormInput },
     });
 
     // mounted lifecycle hook sets book to empty
@@ -96,7 +97,7 @@ describe('pages/add.vue', () => {
     ]);
 
     // save action trigger
-    await fireEvent.click(getByRole('button'));
+    await fireEvent.click(getByRole('button', { name: /submit/i }));
     expect(actions.saveBook).toHaveBeenCalledWith(
       expect.any(Object), // The Vuex context
       book

@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/vue';
+import AppButton from '@/components/AppButton.vue';
 import BookEdit from '@/components/BookEdit.vue';
 jest.mock('vuex-map-fields', () => ({
   getterType: jest.fn(),
@@ -25,6 +26,7 @@ const computed = {
 };
 
 const stubs = {
+  AppButton,
   FormInput: {
     template: '<div data-testid="form-input" />',
   },
@@ -33,7 +35,7 @@ const stubs = {
 describe('BookEdit.vue', () => {
   it('will not save with an empty form', async () => {
     const { getByRole, emitted } = render(BookEdit, { stubs });
-    await fireEvent.click(getByRole('button'));
+    await fireEvent.click(getByRole('button', { name: /submit/i }));
     expect(emitted().save).toBeFalsy();
   });
 
@@ -60,7 +62,7 @@ describe('BookEdit.vue', () => {
       computed,
       stubs,
     });
-    await fireEvent.click(getByRole('button'));
+    await fireEvent.click(getByRole('button', { name: /submit/i }));
     expect(emitted().save).toBeTruthy();
   });
 });
