@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/vue';
-import AppButton from '@/components/AppButton.vue';
 import BookList from '@/components/BookList.vue';
 import { RouterLinkStub } from '@vue/test-utils';
 
