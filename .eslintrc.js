@@ -17,5 +17,6 @@ module.exports = {
   ignorePatterns: ['static/firebase-auth-sw.js'],
   rules: {
     'no-console': 'off',
+    'testing-library/prefer-screen-queries': 'off',
   },
 };
