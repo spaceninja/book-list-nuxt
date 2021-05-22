@@ -10,8 +10,7 @@ const books = {
     release: '2019-09-24',
     series: 'Ninth House #1',
     source: 'Warren Ellis & Charlie Stross',
-    note:
-      'Lesbian necromancers explore a haunted gothic palace in space! Decadent nobles vie to serve the deathless emperor! Skeletons!',
+    note: 'Lesbian necromancers explore a haunted gothic palace in space! Decadent nobles vie to serve the deathless emperor! Skeletons!',
     textSnippet:
       'An epic science fantasy that blends necromantic theory and thrilling swordplay with a wicked, sacrilegious sense of humor; a modern mix of Dune, Riddick, and Gormenghast.',
   },
@@ -38,8 +37,7 @@ const books = {
     release: '2018-11-06',
     series: 'Voidwitch Saga #3',
     source: 'io9',
-    note:
-      'Mars Xi is on the run with a hefty price on her head—and her mutant pet cat and a fellow human weapon, a young boy who can’t control his deadly powers, in tow. Can her father, living somewhere on the edge of the galaxy, help make things right?',
+    note: 'Mars Xi is on the run with a hefty price on her head—and her mutant pet cat and a fellow human weapon, a young boy who can’t control his deadly powers, in tow. Can her father, living somewhere on the edge of the galaxy, help make things right?',
     textSnippet:
       'Corey J. White concludes his pulse-pounding space opera in Static Ruin.',
   },
@@ -53,8 +51,7 @@ const books = {
     prioritize: true,
     release: '2018-10-25',
     source: 'io9',
-    note:
-      '…on Mars, a planet that’s become overrun with crime and corruption. Professional killer Hakan Veil is more than ready to retire home to Earth—but he’ll need to puzzle his way out of an extremely dangerous mystery first.',
+    note: '…on Mars, a planet that’s become overrun with crime and corruption. Professional killer Hakan Veil is more than ready to retire home to Earth—but he’ll need to puzzle his way out of an extremely dangerous mystery first.',
     textSnippet:
       'Richard Morgan has always been one of our most successful SF authors with his fast-moving and brutal storylines, blistering plots and a powerful social conscience behind his work.',
   },
@@ -66,8 +63,7 @@ const books = {
     rating: 0,
     length: 432,
     release: '2018-10-23',
-    note:
-      'a fantasy of fake news, a wandering storyteller is arrested on charges of not only witchcraft, but a spy. His only chance to save himself—tell a good story, catch and hold their attention, or die.',
+    note: 'a fantasy of fake news, a wandering storyteller is arrested on charges of not only witchcraft, but a spy. His only chance to save himself—tell a good story, catch and hold their attention, or die.',
     textSnippet:
       'And yet, he has one great power: his stories in the ears of the rulers determined to prosecute him for betraying a nation he knows next to nothing about. The tales he tells will topple the Queens of Nuryevet and just maybe, save his life.',
   },
@@ -94,8 +90,7 @@ const books = {
     release: '2018-09-18',
     series: 'All Souls Universe #1',
     source: 'io9',
-    note:
-      'A revolutionary war surgeon chooses to become a vampire—and hundreds of years later, meets a young woman in Paris who makes the same choice. They both end up underestimating the challenges that come with being immortal.',
+    note: 'A revolutionary war surgeon chooses to become a vampire—and hundreds of years later, meets a young woman in Paris who makes the same choice. They both end up underestimating the challenges that come with being immortal.',
     textSnippet:
       'A passionate love story and a fascinating exploration of the power of tradition and the possibilities for change, Time&#39;s Convert will delight fans of the All Souls trilogy and all readers of magic, the supernatural, and romance.',
   },
@@ -108,8 +103,7 @@ const books = {
     length: 320,
     release: '2018-09-18',
     source: 'io9',
-    note:
-      'Alt-history book imagines that the Middle East and North Africa have long been the stable, thriving center of the world’s economy and culture, as unrest and fundamentalist violence causes ongoing turmoil in Europe.',
+    note: 'Alt-history book imagines that the Middle East and North Africa have long been the stable, thriving center of the world’s economy and culture, as unrest and fundamentalist violence causes ongoing turmoil in Europe.',
     textSnippet:
       'From the modern master of alternate history and New York Times bestselling author Harry Turtledove, Through Darkest Europe envisions a world dominated by a prosperous and democratic Middle East—and under threat from the world&#39;s worst…',
   },
@@ -122,8 +116,7 @@ const books = {
     length: 416,
     release: '2018-08-14',
     source: 'io9',
-    note:
-      'When a very fortunate cargo pilot discovers an exploration ship filled with sophisticated records of previously unknown worlds, he gathers a ragtag crew for some deep-space treasure hunting.',
+    note: 'When a very fortunate cargo pilot discovers an exploration ship filled with sophisticated records of previously unknown worlds, he gathers a ragtag crew for some deep-space treasure hunting.',
     textSnippet:
       'In this rip-roaring space opera, a ragtag band of explorers are out to make the biggest score in the galaxy.',
   },
@@ -136,8 +129,7 @@ const books = {
     length: 320,
     release: '2018-08-14',
     source: 'io9',
-    note:
-      'After a virus decimates humanity, the last known man is rescued by an alien race. In exchange for his help as a research subject, the aliens agree to help him find the long-lost planet Earth—where he hopes against hope to find more survivors.',
+    note: 'After a virus decimates humanity, the last known man is rescued by an alien race. In exchange for his help as a research subject, the aliens agree to help him find the long-lost planet Earth—where he hopes against hope to find more survivors.',
     textSnippet:
       'The last known human searches the galaxy for companionship in a brilliant standalone novel from the legendary author of the Pip & Flinx series.',
   },
@@ -176,8 +168,7 @@ const books = {
     length: 320,
     release: '2018-05-18',
     source: 'io9',
-    note:
-      'A man wakes up and realizes it’s nine months earlier than it was the day before. The trend continues the next day, when he wakes up three years earlier, and on and on until he eventually seems to completely disappear. Where (or when) did he go?',
+    note: 'A man wakes up and realizes it’s nine months earlier than it was the day before. The trend continues the next day, when he wakes up three years earlier, and on and on until he eventually seems to completely disappear. Where (or when) did he go?',
     textSnippet:
       'She interviews friends, acquaintances, and old lovers – and what she discovers will change not only Ed Richie’s life, but her own… Buying Time is a time-travel novel like no other.',
   },
@@ -190,8 +181,7 @@ const books = {
     length: 300,
     release: '2018-05-17',
     source: 'Warren Ellis',
-    note:
-      "A world in which World War 2 didn't happen, Gurwitsch's theories are carried by the Jewish Bund to a Russian homeland and developed to the point where the people of the Bund speciate.",
+    note: "A world in which World War 2 didn't happen, Gurwitsch's theories are carried by the Jewish Bund to a Russian homeland and developed to the point where the people of the Bund speciate.",
     textSnippet:
       'Simon Ings&#39; The Smoke is about love, loss and loneliness in an incomprehensible world.',
   },
@@ -219,8 +209,7 @@ const books = {
     release: '2018-05-01',
     series: 'Medusa Cycle #1',
     source: 'io9',
-    note:
-      'After she’s shoved out of an airlock and miraculously survives, a rebellious “worm” takes advantage of being presumed dead to prowl the generation starship she’s on, assassinating the powerful to try and even the stakes for everyone else.',
+    note: 'After she’s shoved out of an airlock and miraculously survives, a rebellious “worm” takes advantage of being presumed dead to prowl the generation starship she’s on, assassinating the powerful to try and even the stakes for everyone else.',
     textSnippet:
       'Medusa Uploaded by Emily Devenport offers readers a fast-paced science fiction thriller on the limits of power and control, and the knife-edge between killing for revenge or a greater good.',
   },
@@ -233,8 +222,7 @@ const books = {
     length: 208,
     release: '2018-05-01',
     source: 'io9',
-    note:
-      'Expanded version of the author’s World Fantasy Award-nominated Lovecraftian novella. It’s about a secret agent tasked with investigating strange happenings around New England that seem to be foreshadowing a horrific, chaotic invisible war.',
+    note: 'Expanded version of the author’s World Fantasy Award-nominated Lovecraftian novella. It’s about a secret agent tasked with investigating strange happenings around New England that seem to be foreshadowing a horrific, chaotic invisible war.',
     textSnippet:
       'A dark jewel of a novella, this definitive edition of Caitlín R. Kiernan’s Black Helicopters is the expanded and completed version of the World Fantasy Award-nominated original.',
   },
@@ -248,8 +236,7 @@ const books = {
     release: '2018-04-17',
     series: 'Aven Cycle #1',
     source: 'io9',
-    note:
-      'This historical fantasy debut is set in an alternate version of ancient Rome, as a talented young mage strives to protect her people in a society filled with dangerous secrets and sinister sorcery',
+    note: 'This historical fantasy debut is set in an alternate version of ancient Rome, as a talented young mage strives to protect her people in a society filled with dangerous secrets and sinister sorcery',
     textSnippet:
       'From Unseen Fire is the first novel in the Aven Cycle, a historical fantasy set in an alternate Rome, by debut author Cass Morris The Dictator is dead; long live the Republic.',
   },
@@ -263,8 +250,7 @@ const books = {
     release: '2018-04-17',
     purchased: true,
     source: 'io9',
-    note:
-      'Climate change leads to the construction of a floating city in the Arctic Circle but it’s a new kind of Wild West with crime, poverty, corruption, and disease. Hope arrives when a stranger rides into town—not on a horse, but on a killer whale.',
+    note: 'Climate change leads to the construction of a floating city in the Arctic Circle but it’s a new kind of Wild West with crime, poverty, corruption, and disease. Hope arrives when a stranger rides into town—not on a horse, but on a killer whale.',
     textSnippet:
       'Blackfish City is a remarkably urgent—and ultimately very hopeful—novel about political corruption, organized crime, technology run amok, the consequences of climate change, gender identity, and the unifying power of human connection.',
   },
@@ -277,8 +263,7 @@ const books = {
     length: 320,
     release: '2018-04-17',
     source: 'io9',
-    note:
-      'A woman undergoes a long, grueling journey to her new job on Mars, only to have an eerie sense of déjà vu once she arrives.',
+    note: 'A woman undergoes a long, grueling journey to her new job on Mars, only to have an eerie sense of déjà vu once she arrives.',
     series: 'Planetfall #3',
     textSnippet:
       'After months of travel, Anna Kubrin finally arrives on Mars for her new job as a geologist and de facto artist-in-residence.',
@@ -305,8 +290,7 @@ const books = {
     length: 206,
     release: '2018-02-20',
     source: 'io9',
-    note:
-      'Like everyone in her village, young Heloise fears devils, agents of destruction summoned by the blink of a wizard’s eye. But in truth, she’s actually more scared of the Order—the vicious sect that wanders the country slaughtering anyone who even breathes the word “wizard” or “devil.”',
+    note: 'Like everyone in her village, young Heloise fears devils, agents of destruction summoned by the blink of a wizard’s eye. But in truth, she’s actually more scared of the Order—the vicious sect that wanders the country slaughtering anyone who even breathes the word “wizard” or “devil.”',
     textSnippet:
       'Myke Cole, author of the beloved military fantasy Shadow Ops series, debuts a new epic fantasy trilogy with The Armored Saint, a tale of religious tyrants, arcane war-machines, and underground resistance that will enthrall epic fantasy ...',
   },
@@ -319,8 +303,7 @@ const books = {
     length: 411,
     release: '2018-02-20',
     source: 'io9',
-    note:
-      'a sentient warship that tries to atone for participating in a genocide by becoming a rescue vessel',
+    note: 'a sentient warship that tries to atone for participating in a genocide by becoming a rescue vessel',
     series: 'Embers of War #1',
     textSnippet:
       'From BSFA Award winning author Gareth L. Powell comes the first in a new epic sci-fi trilogy exploring the legacies of war The sentient warship Trouble Dog was built for violence, yet following a brutal war, she is disgusted by her role in ...',
@@ -335,8 +318,7 @@ const books = {
     purchased: true,
     release: '2018-02-15',
     source: 'io9',
-    note:
-      'A crew of workers—all ex-cons—constructing a new base on Mars start falling victim to deadly “accidents” that don’t quite add up. Can the remaining astronauts figure out who’s picking them off before they’re all laid to waste?',
+    note: 'A crew of workers—all ex-cons—constructing a new base on Mars start falling victim to deadly “accidents” that don’t quite add up. Can the remaining astronauts figure out who’s picking them off before they’re all laid to waste?',
     textSnippet: 'A murder mystery set on the frozen red wastes of Mars.',
   },
   '0062676083': {
@@ -349,8 +331,7 @@ const books = {
     purchased: true,
     release: '2018-02-13',
     source: 'io9',
-    note:
-      'Life on the Moon, circa 2072, is already complicated even before the first lunar murder is committed.',
+    note: 'Life on the Moon, circa 2072, is already complicated even before the first lunar murder is committed.',
     textSnippet:
       'Interesting quirks and divided loyalties flesh out this first novel in which sf and mystery intersect in a well-crafted plot.',
   },
@@ -365,8 +346,7 @@ const books = {
     release: '2015-02-24',
     series: 'Shades of Magic #1',
     source: 'book club',
-    note:
-      'For fans of Neil Gaiman, Jonathan Strange & Mr Norrell, and…Hamilton?!',
+    note: 'For fans of Neil Gaiman, Jonathan Strange & Mr Norrell, and…Hamilton?!',
     textSnippet:
       'Serving as an ambassador of his own world while carrying messages to parallel-universe Londons with respective magical abilities and conflicts, Kell hides his secret smuggling activities only to be set up with a forbidden object from a dark…',
   },
@@ -392,8 +372,7 @@ const books = {
     length: 331,
     series: 'Long Price Quartet #1',
     source: 'Tor Book of the Month',
-    note:
-      'The first in a four-part fantasy for readers who love worldbuilding. From one of the authors behind the beloved sci-fi series The Expanse!',
+    note: 'The first in a four-part fantasy for readers who love worldbuilding. From one of the authors behind the beloved sci-fi series The Expanse!',
     textSnippet:
       'A business manager, her apprentice, and a pair of outskirters become the only protectors of a financially powerful, technologically advanced city that is being threatened by the conquering armies of Galt, which are plotting against the city…',
   },
@@ -430,8 +409,7 @@ const books = {
     purchased: true,
     series: "Phèdre's Trilogy #1",
     source: 'twitter',
-    note:
-      'An all time fave of mine: Spies; Court Intrigue; Sacred sex work; Queerness; BDSM; Purple prose; An utterly unforgettable f/f D/s scene',
+    note: 'An all time fave of mine: Spies; Court Intrigue; Sacred sex work; Queerness; BDSM; Purple prose; An utterly unforgettable f/f D/s scene',
     textSnippet:
       'Sold into servitude in the Night Court as a child, Phedre no Delaunay is a woman who struggles for honour and duty, whose loyalty to the land she loves will take her to the edge of despair, and beyond.',
   },
@@ -485,8 +463,7 @@ const books = {
     purchased: true,
     series: 'Axiom #1',
     source: 'io9',
-    note:
-      'It starts with a deep-space salvage crew discovering a seemingly long-abandoned ship that turns out to have one occupant—who, once revived, warns them of an alien race that mixes advanced technology with pure evil.',
+    note: 'It starts with a deep-space salvage crew discovering a seemingly long-abandoned ship that turns out to have one occupant—who, once revived, warns them of an alien race that mixes advanced technology with pure evil.',
     textSnippet:
       'The crew of the freight and salvage ship White Raven encounter a space explorer that claims to have powerful extraterrestrial knowledge, passed down to her by a different alien race than humanity is currently allied with.',
   },
@@ -588,8 +565,7 @@ const books = {
     rating: 3.72,
     length: 345,
     purchased: true,
-    note:
-      'Remarkable & Sarcastic: When Rogers returns after only a year away, something has changed. These are soldiers—actual soldiers doing actual soldier things like preparing for a war that Rogers is sure doesn’t exist. Rogers vows to put a stop to all this nonsense—even if it means doing actual work.',
+    note: 'Remarkable & Sarcastic: When Rogers returns after only a year away, something has changed. These are soldiers—actual soldiers doing actual soldier things like preparing for a war that Rogers is sure doesn’t exist. Rogers vows to put a stop to all this nonsense—even if it means doing actual work.',
     series: 'Epic Failure #1',
     textSnippet:
       'These are soldiers—actual soldiers doing actual soldier things like preparing for a war that Rogers is sure doesn’t exist. Rogers vows to put a stop to all this nonsense—even if it means doing actual work.',
@@ -665,8 +641,7 @@ const books = {
     rating: 4.31,
     length: 754,
     purchased: true,
-    note:
-      'Recommended to Kara and by many people on Twitter in the wake of the white boy writing about slavery debacle',
+    note: 'Recommended to Kara and by many people on Twitter in the wake of the white boy writing about slavery debacle',
     series: 'Xenogenesis #1-3',
     textSnippet:
       'But Lilith and all humanity must now share the world with uncanny, unimaginably alien creatures: their own children. This is their story.',
@@ -679,8 +654,7 @@ const books = {
     rating: 4.11,
     length: 248,
     purchased: true,
-    note:
-      'Recommended to Kara and by many people on Twitter in the wake of the white boy writing about slavery debacle',
+    note: 'Recommended to Kara and by many people on Twitter in the wake of the white boy writing about slavery debacle',
     series: 'Xenogenesis #1',
     textSnippet:
       'Lilith lyapo awoke from a centuries-long sleep to find herself aboard the vast spaceship of the Oankali.',
@@ -718,8 +692,7 @@ const books = {
     length: 593,
     purchased: true,
     source: 'Verge and io9',
-    note:
-      'An excellent start to a fantasy epic. Modern epic fantasy mixed in with a nice dose of Lovecraftian weirdness',
+    note: 'An excellent start to a fantasy epic. Modern epic fantasy mixed in with a nice dose of Lovecraftian weirdness',
     series: 'Chronicle of the Unhewn Throne #1',
     textSnippet:
       'The children of an assassinated emperor try to stay alive and avenge their father&#39;s death while continuing down their individual life-paths, one in a monastery, another training with elite soldiers, and one appointed a minister determined ...',
@@ -745,8 +718,7 @@ const books = {
     length: 356,
     purchased: true,
     prioritize: true,
-    note:
-      "A space opera universe I invented circa 1996 and set two novels in—originally to be a series, but, alas, due to internal consistency issues I won't be writing any more of these.",
+    note: "A space opera universe I invented circa 1996 and set two novels in—originally to be a series, but, alas, due to internal consistency issues I won't be writing any more of these.",
     series: 'Eschaton #1',
     textSnippet:
       'In the twenty-first century man created the Eschaton, a sentient artificial intelligence.',
@@ -758,8 +730,7 @@ const books = {
     isbn: '1841493368',
     rating: 3.97,
     length: 448,
-    note:
-      "A space opera universe I invented circa 1996 and set two novels in—originally to be a series, but, alas, due to internal consistency issues I won't be writing any more of these.",
+    note: "A space opera universe I invented circa 1996 and set two novels in—originally to be a series, but, alas, due to internal consistency issues I won't be writing any more of these.",
     series: 'Eschaton #2',
     textSnippet:
       'In the twenty-first century man created the Eschaton, a sentient artificial intelligence.',
@@ -785,8 +756,7 @@ const books = {
     length: 400,
     purchased: true,
     source: 'io9',
-    note:
-      'A woman goes missing as a teen and returns 20 years later, claiming she’s spent the intervening time on another planet. Her sister is thrilled but is unsure about whether or not she should believe those tales of intergalactic travel.',
+    note: 'A woman goes missing as a teen and returns 20 years later, claiming she’s spent the intervening time on another planet. Her sister is thrilled but is unsure about whether or not she should believe those tales of intergalactic travel.',
     textSnippet:
       'Selena and Julie are sisters. As children they were closest companions, but as they grow towards maturity, a rift develops between them. There are greater rifts, however. Julie goes missing at the age of seventeen.',
   },
@@ -810,8 +780,7 @@ const books = {
     rating: 3.8,
     length: 377,
     purchased: true,
-    note:
-      "found while browsing: 'NASA discovered the alien ship lurking in the asteroid belt in the 1960s. They kept the Target under intense surveillance for decades, letting the public believe they were exploring the solar system, while they worked feverishly to refine the technology needed to reach it.'",
+    note: "found while browsing: 'NASA discovered the alien ship lurking in the asteroid belt in the 1960s. They kept the Target under intense surveillance for decades, letting the public believe they were exploring the solar system, while they worked feverishly to refine the technology needed to reach it.'",
     series: 'Confluence #1',
     textSnippet:
       'As the derelict ship devolves into chaos and the crew gets cut off from their escape route, Jane must decide if she can trust the alien’s help to survive. *This is the bestselling novel in its original form.',
@@ -825,8 +794,7 @@ const books = {
     length: 334,
     purchased: true,
     source: 'Verge',
-    note:
-      'Craft Sequence is an amazing series of urban fantasy novels, set in a richly imagined world where magic is treated more like law or coding than something mystical.​',
+    note: 'Craft Sequence is an amazing series of urban fantasy novels, set in a richly imagined world where magic is treated more like law or coding than something mystical.​',
     series: 'Craft Sequence #1',
     textSnippet:
       'Hired to resurrect a deceased fire god to protect his rioting city, Tara, a first-year associate in an international necromantic firm, teams up with a chain-smoking, faith-questioning priest to build a case in the city&#39;s courts and ...',
@@ -839,8 +807,7 @@ const books = {
     rating: 3.83,
     length: 412,
     purchased: true,
-    note:
-      'US becomes an oppressive regime, group of dissidents steal a starship to colonize a moon. …looks as the challenges of settling a colony on an alien world with alien biology, as well as the politics involved in recreating a society away from Earth.',
+    note: 'US becomes an oppressive regime, group of dissidents steal a starship to colonize a moon. …looks as the challenges of settling a colony on an alien world with alien biology, as well as the politics involved in recreating a society away from Earth.',
     series: 'Coyote #1',
     textSnippet:
       'In 2070, a group of political dissidents and their families escape the repressive world of twenty-first-century Earth to seek new lives as interstellar colonists, placing themselves in cold sleep for a more than two-hundred-year odyssey to ...',
@@ -866,8 +833,7 @@ const books = {
     length: 512,
     purchased: true,
     source: 'io9',
-    note:
-      'Imagine The Real World—in space. …the kids are actually on an elaborate soundstage. The deception makes for a ratings hit, but things get weird when the cast is tricked into believing they’ve suddenly lost all communications with Earth.',
+    note: 'Imagine The Real World—in space. …the kids are actually on an elaborate soundstage. The deception makes for a ratings hit, but things get weird when the cast is tricked into believing they’ve suddenly lost all communications with Earth.',
     textSnippet:
       'From the author of Croak comes this raucous account of ten teenagers picked to live on a rocket ship, get shot into space, and have their adventures broadcast live to the entire world.',
   },
@@ -930,8 +896,7 @@ const books = {
     length: 560,
     purchased: true,
     source: 'A Working Library and Warren Ellis',
-    note:
-      'You want to know how good GNOMON is? I hate him for it. Haaaate. I had a little hategasm just typing those words.',
+    note: 'You want to know how good GNOMON is? I hate him for it. Haaaate. I had a little hategasm just typing those words.',
     textSnippet:
       'It is a magnificent achievement ... He&#39;s never written a bad book, but this is the one that&#39;ll see him mentioned in the same breath as William Gibson and David Mitchell ... This book seriously just destroyed me with joy.',
   },
@@ -1092,8 +1057,7 @@ const books = {
     length: 432,
     purchased: true,
     source: 'io9',
-    note:
-      'Orbit Books is responsible for some of the most exciting space adventures out there:, including James S.A. Corey’s Expanse series, Kim Stanley Robinson’s Aurora, and Ann Leckie’s Ancillary trilogy.',
+    note: 'Orbit Books is responsible for some of the most exciting space adventures out there:, including James S.A. Corey’s Expanse series, Kim Stanley Robinson’s Aurora, and Ann Leckie’s Ancillary trilogy.',
     series: 'Indranan War #1',
     textSnippet:
       'Dive into this action-packed, Star Wars-style science fiction adventure from debut author K.B. Wagers.',
@@ -1119,8 +1083,7 @@ const books = {
     rating: 4.06,
     length: 320,
     purchased: true,
-    note:
-      'A lone human ambassador is sent to Winter, an alien world without sexual prejudice, where the inhabitants can change their gender whenever they choose.',
+    note: 'A lone human ambassador is sent to Winter, an alien world without sexual prejudice, where the inhabitants can change their gender whenever they choose.',
     textSnippet:
       'On behalf of his government, an earthling travels to an alien, backward world whose inhabitants are all ambisexual',
   },
@@ -1156,8 +1119,7 @@ const books = {
     rating: 3.6,
     length: 624,
     source: 'Susana Polo',
-    note:
-      "NY2140 is a fascinating extrapolation of NYC after sea levels rise by 50ft. 'I was there, I was there when the levies broke and half the city drowned in 2 hours'",
+    note: "NY2140 is a fascinating extrapolation of NYC after sea levels rise by 50ft. 'I was there, I was there when the levies broke and half the city drowned in 2 hours'",
     textSnippet:
       'Through the eyes of the varied inhabitants of one building, Kim Stanley Robinson shows us how one of our great cities will change with the rising tides.',
   },
@@ -1193,8 +1155,7 @@ const books = {
     rating: 3.15,
     length: 288,
     source: 'Warren Ellis',
-    note:
-      "Women who love, who hate, who kill, who destroy. It's about what happens after the end of the world, where (another) other-humanly elite has gone to orbit to live out sexless, loveless lives of bizarre art and ritual",
+    note: "Women who love, who hate, who kill, who destroy. It's about what happens after the end of the world, where (another) other-humanly elite has gone to orbit to live out sexless, loveless lives of bizarre art and ritual",
     textSnippet:
       'The Book of Joan is an explosive work of fiction that considers what it means to be human, the fluidity of sex and gender, and the urgency of art as a means for survival.',
   },
@@ -1206,8 +1167,7 @@ const books = {
     rating: 4.17,
     length: 369,
     source: 'io9',
-    note:
-      'A geologist whose art has captured the imagination of a space-obsessed multibillionaire accepts a new a gig on Mars, partially as a way to escape the postpartum depression that’s been plaguing her back on Earth. But as soon as she arrives, she makes a shocking discovery—and suddenly she’s surrounded by strangers she can’t trust in a space colony that’s millions and millions of miles away from home.',
+    note: 'A geologist whose art has captured the imagination of a space-obsessed multibillionaire accepts a new a gig on Mars, partially as a way to escape the postpartum depression that’s been plaguing her back on Earth. But as soon as she arrives, she makes a shocking discovery—and suddenly she’s surrounded by strangers she can’t trust in a space colony that’s millions and millions of miles away from home.',
     series: 'Planetfall #2',
     textSnippet:
       'Clarke Award Shortlist Acclaimed author Emma Newman returns to the captivating universe she created in Planetfall with a stunning science fiction mystery where one man&#39;s murder is much more than it seems.',
@@ -1233,8 +1193,7 @@ const books = {
     length: 415,
     prioritize: true,
     source: 'Warren Ellis',
-    note:
-      'I re-read Charles Stross’ ACCELERANDO at least once a year.  More often, I’ll return to just the first three chapters once every few months.  ACCELERANDO is a sprawling (yet massively condensed and concentrated) piece of radical hard sf about the deep computational future.  It’s also about Manfred Macx, “venture altruist,” staying ahead of the memetic curve with an exotic set of information-processing hardware.',
+    note: 'I re-read Charles Stross’ ACCELERANDO at least once a year.  More often, I’ll return to just the first three chapters once every few months.  ACCELERANDO is a sprawling (yet massively condensed and concentrated) piece of radical hard sf about the deep computational future.  It’s also about Manfred Macx, “venture altruist,” staying ahead of the memetic curve with an exotic set of information-processing hardware.',
     textSnippet:
       'His most ambitious novel to date, ACCELERANDO is a multi-generational saga following a brilliant clan of 21st-century posthumans.',
   },
@@ -1246,8 +1205,7 @@ const books = {
     rating: 3.9,
     length: 780,
     source: 'Susana Polo',
-    note:
-      'a married couple who commission a highly immersive simulation of what modern South America would be like if Europe had never discovered it, basically South American Wakanda',
+    note: 'a married couple who commission a highly immersive simulation of what modern South America would be like if Europe had never discovered it, basically South American Wakanda',
     series: 'Otherland #1',
     textSnippet:
       'In the near future, a global conspiracy threatens to sacrifice the future of humanity for the promise of a utopia based on virtual reality, in a critically praised novel by the best-selling author of Tailchaser&#39;s Song.',
@@ -1271,8 +1229,7 @@ const books = {
     length: 533,
     source: 'io9',
     purchased: true,
-    note:
-      'In this debut novel set in and around 18th century Cairo, a faux fortune teller realizes she has actual magic powers, awakened by the arrival of a mysterious djinn warrior who opens up her world for better and worse.',
+    note: 'In this debut novel set in and around 18th century Cairo, a faux fortune teller realizes she has actual magic powers, awakened by the arrival of a mysterious djinn warrior who opens up her world for better and worse.',
     series: 'Daevabad #1',
     textSnippet:
       'But alongside this new world the old stories linger. Tales of djinn and spirits. Of cities hidden among the swirling sands of the desert, full of enchantment, desire and riches.',
@@ -1298,8 +1255,7 @@ const books = {
     length: 599,
     purchased: true,
     source: 'Many',
-    note:
-      'My all-time favorite zombie apocalypse series!!! Spoiled 4 any other!!! About MUCH more than zombies.',
+    note: 'My all-time favorite zombie apocalypse series!!! Spoiled 4 any other!!! About MUCH more than zombies.',
     series: 'Newsflesh #1',
     textSnippet:
       'Now, twenty years after the Rising, Georgia and Shaun Mason are on the trail of the biggest story of their lives-the dark conspiracy behind the infected. The truth will out, even if it kills them.',
@@ -1362,8 +1318,7 @@ const books = {
     length: 384,
     prioritize: true,
     source: 'Verge',
-    note:
-      'Space pirates! Specifically, queer space pirates of colour fighting off a murderous AI. Adda and Iridian are a pair of engineers who hijack a colony ship to join a pirate crew, only to discover that Barbary Station is controlled by an insane AI. This looks like it could be a really exciting space opera adventure.',
+    note: 'Space pirates! Specifically, queer space pirates of colour fighting off a murderous AI. Adda and Iridian are a pair of engineers who hijack a colony ship to join a pirate crew, only to discover that Barbary Station is controlled by an insane AI. This looks like it could be a really exciting space opera adventure.',
     series: 'Shieldrunner Pirates #1',
     textSnippet:
       'Desperate for employment, they hijack a colony ship and plan to join a famed pirate crew living in luxury at Barbary Station, an abandoned shipbreaking station in deep space. But when they arrive there, nothing is as expected.',
@@ -1426,8 +1381,7 @@ const books = {
     isbn: '0765392070',
     rating: 3.62,
     length: 303,
-    note:
-      'Autonomous is to biotech and AI what Neuromancer was to the Internet. - Neal Stephenson',
+    note: 'Autonomous is to biotech and AI what Neuromancer was to the Internet. - Neal Stephenson',
     textSnippet:
       'Judith &quot;Jack&quot; Chen, a scientist-turned-drug pirate, travels the world in a submarine to bring cheap medicine to the poor, but when her latest drug hack results in a trail of lethal overdoses, she is pursued by a jaded military agent and his ...',
   },
@@ -1463,8 +1417,7 @@ const books = {
     rating: 3.94,
     length: 485,
     source: 'A Working Library',
-    note:
-      'A curious kind of time travel in which information—but not atoms—flows between a near future and one further away.',
+    note: 'A curious kind of time travel in which information—but not atoms—flows between a near future and one further away.',
     textSnippet:
       'Depending on her veteran brother&#39;s benefits in a city where jobs outside the drug trade are rare, Flynne assists her brother&#39;s latest beta-test tech assignment only to uncover an elaborate murder scheme.',
   },
@@ -1487,8 +1440,7 @@ const books = {
     rating: 4.16,
     length: 1040,
     source: 'Chuck',
-    note:
-      'fun antihero with high charisma, literally convinces the rock wall of his prison cell to set him free',
+    note: 'fun antihero with high charisma, literally convinces the rock wall of his prison cell to set him free',
     series: 'Legend of Eli Monpress #1-3',
     textSnippet:
       'But he&#39;ll start small for now. He&#39;ll just steal something that no one will miss - at least for a while. Like a king. The Legend of Eli Monpress includes the novels: The Spirit Thief, The Sprit Rebellion, and The Spirit Eater.',
@@ -1501,8 +1453,7 @@ const books = {
     rating: 3.88,
     length: 310,
     source: 'Chuck',
-    note:
-      'fun antihero with high charisma, literally convinces the rock wall of his prison cell to set him free',
+    note: 'fun antihero with high charisma, literally convinces the rock wall of his prison cell to set him free',
     series: 'Legend of Eli Monpress #1',
     textSnippet:
       "Eli Monpress is talented. He's charming. And he's a thief. But not just any thief. He's the greatest thief of the age - and he's also a wizard. And with the help of his partners - a swordsman with the most powerful magic sword in the world but no magical ability of his own, and a demonseed who can step through shadows and punch through walls - he's going to put his plan into effect.",
@@ -1516,8 +1467,7 @@ const books = {
     length: 352,
     purchased: true,
     source: 'io9',
-    note:
-      'imagines that mysterious aliens have taken up residence in New York City—ahead of a looming disaster that Earth’s scientists must scramble to prevent.',
+    note: 'imagines that mysterious aliens have taken up residence in New York City—ahead of a looming disaster that Earth’s scientists must scramble to prevent.',
     series: "Yesterday's Kin #1",
     textSnippet:
       'Tomorrow&#39;s Kin is the first volume in and all new hard science fiction trilogy by Nancy Kress based on the Nebula Award-winning Yesterday&#39;s Kin.',
@@ -1530,8 +1480,7 @@ const books = {
     rating: 3.53,
     length: 312,
     source: 'io9',
-    note:
-      'Constantly-shifting habitable zone means cities must be constantly re-mapped, a surveyor (whose best friend is the leech-like creature that lives in his brain and helps him navigate) makes an alarming discovery at the edge of civilization.',
+    note: 'Constantly-shifting habitable zone means cities must be constantly re-mapped, a surveyor (whose best friend is the leech-like creature that lives in his brain and helps him navigate) makes an alarming discovery at the edge of civilization.',
     textSnippet:
       'Seth is a surveyor, along with his friend Theo, a leech-like creature running through his skull who tells Seth what lies to his left and right.',
   },
@@ -1568,8 +1517,7 @@ const books = {
     rating: 3.55,
     length: 370,
     source: 'Verge',
-    note:
-      'A private space company is getting ready to put astronauts on Mars for the first time. The trio are tasked with a 17mo mission to test their training and ensure that they’re ready to travel to the Red Planet.',
+    note: 'A private space company is getting ready to put astronauts on Mars for the first time. The trio are tasked with a 17mo mission to test their training and ensure that they’re ready to travel to the Red Planet.',
     textSnippet:
       'Astonishingly imaginative, tenderly comedic, and unerringly wise, The Wanderers explores the differences between those who go and those who stay, telling a story about the desire behind all exploration: the longing for discovery and the ...',
   },
@@ -1603,8 +1551,7 @@ const books = {
     rating: 3.84,
     length: 288,
     prioritize: true,
-    note:
-      'The Bridge has been described as a ‘secret Culture novel’, a mystical key to Banks’s literary universe. It blurred the boundaries between genres – and revealed his sense of fun and games',
+    note: 'The Bridge has been described as a ‘secret Culture novel’, a mystical key to Banks’s literary universe. It blurred the boundaries between genres – and revealed his sense of fun and games',
     textSnippet:
       'The man who wakes up in the extraordinary world of a bridge has amnesia, and his doctor doesn&#39;t seem to want to cure him. Does it matter? Exploring the bridge occupies most of his days. But at night there are his dreams.',
   },
@@ -1653,8 +1600,7 @@ const books = {
     rating: 3.7,
     length: 400,
     source: 'io9',
-    note:
-      'standalone space opera about a woman who awakes with no memory amid war between world-ships traveling the darkest regions of the universe. In this desperate setting she realizes she may hold the key to salvation—but at what cost?',
+    note: 'standalone space opera about a woman who awakes with no memory amid war between world-ships traveling the darkest regions of the universe. In this desperate setting she realizes she may hold the key to salvation—but at what cost?',
     textSnippet:
       'Somewhere on the outer rim of the universe, a mass of decaying worldships known as the Legion is traveling in the seams between the stars.',
   },
@@ -1677,8 +1623,7 @@ const books = {
     rating: 3.08,
     length: 305,
     source: 'Verge',
-    note:
-      'One such clone is assigned to man a distant outpost, and has to come to terms with a terrible incident in his past. This has the looks of a thoughtful and interesting read.',
+    note: 'One such clone is assigned to man a distant outpost, and has to come to terms with a terrible incident in his past. This has the looks of a thoughtful and interesting read.',
     textSnippet:
       'Aldo&#39;s only hope of transcending his station, and cloning a piece of his soul somewhere new is both his triumph and his terrible crime. The Fortress at the End of Time is a new science fiction novel from Joe M. McDermott.',
   },
@@ -1690,8 +1635,7 @@ const books = {
     rating: 3.74,
     length: 623,
     source: 'Verge & io9',
-    note:
-      "an ambitious, astonishing, and sublime work, one that both exemplifies and diverges from what one might think of when it comes to epic fantasy. It should rank amongst the genre's best works.",
+    note: "an ambitious, astonishing, and sublime work, one that both exemplifies and diverges from what one might think of when it comes to epic fantasy. It should rank amongst the genre's best works.",
     series: 'Dandelion Dynasty #1',
     textSnippet:
       'Becoming the best of friends after a series of adventures fighting against vast conscripted armies, a bandit and a duke&#39;s son become the rival leaders of separate factions with very different ideas about justice and politics.',
@@ -1704,8 +1648,7 @@ const books = {
     rating: 3.61,
     length: 432,
     source: 'Verge',
-    note:
-      'Take a starship, crew it with people who have questionable paths, introduce a sponsor with a major vendetta, then send them out on what’s most likely a suicide mission to Earth',
+    note: 'Take a starship, crew it with people who have questionable paths, introduce a sponsor with a major vendetta, then send them out on what’s most likely a suicide mission to Earth',
     series: 'Keiko #1',
     textSnippet:
       'The Keiko is a ship of smugglers, soldiers of fortune and adventurers, travelling Earthâe(tm)s colony planets searching for the next job.',
@@ -1718,8 +1661,7 @@ const books = {
     rating: 3.73,
     length: 466,
     source: 'Warren Ellis & aworkinglibrary',
-    note:
-      'mainly a realistic take on how humanity can travel to other planets, Robinson takes a hard look at what settling on a new world might look like when such a ship would arrive: incredibly difficult.',
+    note: 'mainly a realistic take on how humanity can travel to other planets, Robinson takes a hard look at what settling on a new world might look like when such a ship would arrive: incredibly difficult.',
     textSnippet:
       'Brilliantly imagined and beautifully told, it is the work of a writer at the height of his powers. Our voyage from Earth began generations ago. Now, we approach our new home. AURORA.',
   },
@@ -1730,8 +1672,7 @@ const books = {
     isbn: '0441015824',
     rating: 3.83,
     length: 368,
-    note:
-      "set in Steele's Coyote universe, but is not a part of the core trilogy. It runs paralell to it.",
+    note: "set in Steele's Coyote universe, but is not a part of the core trilogy. It runs paralell to it.",
     series: 'Coyote #4',
     textSnippet:
       'More than fifty years after a European starship goes missing while investigating an unidentified space object, the expedition&#39;s three surviving members return to Earth without having aged and possessing claims about an extraterrestrial race ...',
@@ -1743,8 +1684,7 @@ const books = {
     isbn: '0765382156',
     rating: 3.66,
     length: 336,
-    note:
-      'Another great book from him is Arkwright, which portrays how humans could set up an interstellar ship and colonize a distant planet.',
+    note: 'Another great book from him is Arkwright, which portrays how humans could set up an interstellar ship and colonize a distant planet.',
     textSnippet:
       'Nathan Arkwright is a famous science fiction writer who is convinced that humanity cannot survive on Earth. His Arkwright Foundation dedicates itself to creating a colony in deep space.',
   },
@@ -1756,8 +1696,7 @@ const books = {
     rating: 4.21,
     length: 145,
     purchased: true,
-    note:
-      'S.T.A.L.K.E.R. is based on the novella Roadside Picnic, by the Strugatsky brothers, and its film adaptation, Andrei Tarkovsky’s Stalker.',
+    note: 'S.T.A.L.K.E.R. is based on the novella Roadside Picnic, by the Strugatsky brothers, and its film adaptation, Andrei Tarkovsky’s Stalker.',
     textSnippet:
       'Red Schuhart is a stalker, one of those strange misfits who are compelled by some unknown force to venture illegally into the Zone and, in spite of the extreme danger, collect the mysterious artefacts that the alien visitors left scattered ...',
   },
@@ -1768,8 +1707,7 @@ const books = {
     isbn: '0345460014',
     rating: 4.16,
     length: 578,
-    note:
-      'China Mieville’s Bas Lag is one of my favorite fictional worlds. Unlike traditional nations, Armada is a nation made up of boats tied together. Its nine boroughs are ruled by different factions, all quietly vying for control over Armada itself.',
+    note: 'China Mieville’s Bas Lag is one of my favorite fictional worlds. Unlike traditional nations, Armada is a nation made up of boats tied together. Its nine boroughs are ruled by different factions, all quietly vying for control over Armada itself.',
     series: 'Bas-Lag #2',
     textSnippet:
       'En route to the fledgling colony of New Crobuzon, a ship carrying prisoners, slaves, and a few travelers, each with their own reason for leaving the city, is attacked by pirates, who bring the surviving passengers to a strange floating city ...',
@@ -1781,8 +1719,7 @@ const books = {
     isbn: '0441010644',
     rating: 4.13,
     length: 694,
-    note:
-      'If you’re a fan of the Mass Effect universe, you’re a fan of the Revelation Space world, you just don’t know it yet. Everything Mass Effect did, Revelation Space did better, and I say this as a huge fan of both series.',
+    note: 'If you’re a fan of the Mass Effect universe, you’re a fan of the Revelation Space world, you just don’t know it yet. Everything Mass Effect did, Revelation Space did better, and I say this as a huge fan of both series.',
     textSnippet:
       'Tanner Mirabel ventures through the dark underside of Chasm City, a once utopian city overrun by a vicious virus known as the Melding Plague, in pursuit of a lowlife postmortal and comes face to face with a centuries-old atrocity that ...',
   },
@@ -1819,8 +1756,7 @@ const books = {
     length: 404,
     prioritize: true,
     source: 'io9',
-    note:
-      "Iain M. Banks' latest novel Transition, in bookstores this week, will jelly your brains in brilliant weirdness. Banks turns political world-building on its head in this exciting tale of an Earth-based multiverse in turmoil, where dimension-hopping assassins jockey for power.",
+    note: "Iain M. Banks' latest novel Transition, in bookstores this week, will jelly your brains in brilliant weirdness. Banks turns political world-building on its head in this exciting tale of an Earth-based multiverse in turmoil, where dimension-hopping assassins jockey for power.",
     textSnippet:
       'There is a world that hangs suspended between triumph and catastrophe, between the dismantling of the Wall and the fall of the Twin Towers, frozen in the shadow of suicide terrorism and global financial collapse.',
   },
@@ -2079,8 +2015,7 @@ const books = {
     rating: 4.43,
     length: 541,
     source: 'Pat Rothfuss',
-    note:
-      'Sanderson has now been added to a very short list. Specifically, the list authors I wish to kill so that I might eat their livers and thereby gain their power.',
+    note: 'Sanderson has now been added to a very short list. Specifically, the list authors I wish to kill so that I might eat their livers and thereby gain their power.',
     series: 'Mistborn #1',
     textSnippet:
       'Experiencing an epiphany within the most daunting prison of the monstrous Lord Ruler, half-Skaa Kelsier finds himself taking on the powers of a Mistborn, and teams up with ragged orphan Vin in a desperate plot to save their world.',
@@ -2094,8 +2029,7 @@ const books = {
     length: 319,
     purchased: true,
     source: 'Tor Book of the Month',
-    note:
-      'A landmark of grimdark fantasy, starting a trend that continues with Game of Thrones today.',
+    note: 'A landmark of grimdark fantasy, starting a trend that continues with Game of Thrones today.',
     series: 'Chronicles of the Black Company #1',
     textSnippet:
       'The tough mercenaries of the Black Company risk their lives and their souls as they set out to find the White Rose, a mystical figure who embodies the very essence of good.',
