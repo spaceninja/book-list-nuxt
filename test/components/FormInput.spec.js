@@ -47,8 +47,10 @@ describe('FormInput.vue', () => {
   });
 
   it('renders with a unique ID', () => {
+    /* eslint-disable testing-library/render-result-naming-convention */
     const alpha = render(FormInput, { props: { label: 'alpha' } });
     const beta = render(FormInput, { props: { label: 'beta' } });
+    /* eslint-enable */
     const alphaId = alpha.getByLabelText('alpha').id;
     const betaId = beta.getByLabelText('beta').id;
     expect(alphaId).not.toMatch(betaId);
